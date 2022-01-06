@@ -1,0 +1,6 @@
+export const DEFAULT = "default"
+export const xs = "xs"
+export const sm = "sm"
+export const md = "md"
+export const lg = "lg"
+export const xl = "xl"

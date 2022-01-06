@@ -1,0 +1,5 @@
+export const green = "green"
+export const greenLight = "green-light"
+export const outlinedGreenDark = "outlined-green-dark"
+export const coral = "coral"
+export const white = "white"
