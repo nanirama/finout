@@ -17,7 +17,7 @@ const Integration = () => {
         <h2 className="font-medium mb-5 2xl:mb-10">Integrations</h2>        
         <Grid.Row>
             <Grid.Col size="w-full">
-            <StaticImage className="w-8/12" src="../assets/images/integrations.png" alt="" />
+            <StaticImage className="w-8/12" src="../../assets/images/integrations.png" alt="" />
             </Grid.Col>
          
             </Grid.Row>

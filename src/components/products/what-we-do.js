@@ -17,7 +17,7 @@ const WhatweDo = () => {
         
         <h2 className="font-medium mb-10 2xl:mb-14">What we do</h2>
         <div className="lg:w-3/4 m-auto">
-            <StaticImage src="../assets/images/fac.png" alt="" />
+            <StaticImage src="../../assets/images/fac.png" alt="" />
             </div>
         <p>We Integrate with cloud providers, data warehouses and observability platforms to correlate and analyze cost into business KPIs , wrapped up as a modern-day ERP system.</p>
      
