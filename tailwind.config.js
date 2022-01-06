@@ -78,20 +78,6 @@ module.exports = {
       transitionTimingFunction: {
         "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
         "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
-      },
-      keyframes: {
-        fadeIn: {
-              '0%': {
-                  transform: 'translateY(-100%)',
-                  transition: '0.4s'
-              },
-              '100%': {
-                  transform: 'translateY(0%)'
-              },
-          }
-      },
-      animation: {
-        fadeIn: "fadeIn 0.75s ease-out forwards"
       }
     },
   },
