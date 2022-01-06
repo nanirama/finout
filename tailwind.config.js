@@ -2,7 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 const typographyContent = require("./src/plugins/tailwindcss/typography-content")
 
 module.exports = {
-  mode: "jit",
+  // mode: "jit",
   purge: {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     safelist: ["slick-dots", "slick-slide", "slick-track", "hs-form"],
