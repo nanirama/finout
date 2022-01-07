@@ -2,7 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 const typographyContent = require("./src/plugins/tailwindcss/typography-content")
 
 module.exports = {
-  // mode: "jit",
+  mode: "jit",
   purge: {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     safelist: ["slick-dots", "slick-slide", "slick-track", "hs-form"],
@@ -78,7 +78,7 @@ module.exports = {
       transitionTimingFunction: {
         "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
         "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
-      }
+      },
     },
   },
   variants: {

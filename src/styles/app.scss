@@ -8,28 +8,3 @@ $slick-loader-path: "~slick-carousel/slick/";
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
-header.fixed nav ul li a{color: #1B1F1D;}
-
-header.fixed .btn.btn-coral {background-color: #f87979; color: #fff;}
-@media only screen and (min-width:1024px) {
- header.fixed a.btn.login{color: #1B1F1D; background-color: transparent;}
-}
-// header.fixed nav ul li a{color: #1B1F1D;}
-
-// header.fixed .btn.btn-coral {background-color: #f87979; color: #fff;}
-// @media only screen and (min-width:1024px) {
-//  header.fixed a.btn.login{color: #1B1F1D; background-color: transparent;}
-// }
-.slick-slider .slick-prev, .slick-slider .slick-next{ border:1px solid #D0D0D0; width:60px;height:60px; border-radius: 50%; text-align: center; z-index: 9999;}
-.slick-prev::before, .slick-next::before{ display:none;}
-.slick-slider .slick-prev{ left:0;}
-.slick-slider .slick-next{ right:0;}
-
-.slides .slick-slide{ margin:0 10px;}
-.slides .slick-slide.slick-active{ opacity: 1;}
-
-.slides{ position:relative;}
-.slides:after, .slides:before { content: ""; background: #FAFAFA; position: absolute;top: 0;height: 100%;width:30%;z-index: 100;}
-.slides:before {background: linear-gradient(89.51deg, #FFFFFF 28.66%, rgba(255, 255, 255, 0) 106.13%)}
-.slides:after { right: 0;transform: rotate(-180deg);background: linear-gradient(89.51deg, #FFFFFF 28.66%, rgba(255, 255, 255, 0) 106.13%);}

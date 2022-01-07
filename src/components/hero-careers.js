@@ -47,7 +47,7 @@ const HeroCareers = () => {
   const img = data?.featuredImage || null
 
   return (
-    <Section className="relative pt-32 pb-64 bg-green" >
+    <Section className="relative pt-32 pb-64 bg-green">
       {img && (
         <div className="absolute left-0 top-0 w-full h-full">
           <GatsbyImage

@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react"
+import * as React from "react"
 import classNames from "classnames"
 import { isIE } from "react-device-detect"
-import { useSwipeable } from "react-swipeable";
 
 // Components
 import Header from "./header"
@@ -19,7 +18,6 @@ const Layout = ({
   children,
   className,
 }) => {
-  const path = location.pathname
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
 
@@ -27,44 +25,16 @@ const Layout = ({
     wrapper: !hideHeader,
     [className]: className,
   })
-  const [isOpen, setOpen] = React.useState(false);
-  const [isSticky, setSticky] = useState(false);
-  const handlers = useSwipeable({
-    trackMouse: true,
-    onSwipedLeft: () => setOpen(true)
-  });
-  const ref = useRef(null);
-  
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', () => handleScroll);
-    };
-  }, []);
-
-  const handleScroll = () => {
-    console.log('Sccroll top',ref.current.getBoundingClientRect().top)
-    if (ref.current) {
-      if(ref.current.getBoundingClientRect().top>=0)
-      {
-          setSticky(false) 
-      }
-      else
-      {
-         setSticky(ref.current.getBoundingClientRect().top <= -700);
-      }      
-    }
-  };
   return (
-    <div className={path==='/' && !isSticky ? "wrapper lg:pt-0 pt-0" : "wrapper" } data-is-root-path={isRootPath}>
+    <div className={wrapperClasses} data-is-root-path={isRootPath}>
       <SkipToContent />
 
       {isIE && <BrowserSupport />}
 
-      {!hideHeader && <Header postTitle={title} isSticky={isSticky} location={location} />}
+      {!hideHeader && <Header postTitle={title} />}
 
-      <main id="main" ref={ref}>
+      <main id="main">
         {hero}
         {children}
       </main>
