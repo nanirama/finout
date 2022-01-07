@@ -4,12 +4,12 @@ import classNames from "classnames"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { linkRegex, hasHash, hasMailTo } from "../../helpers"
 
-const NavItem = ({ title, url, children }) => {
+const NavItem = ({ title, url, children, isSticky }) => {
   const regex = linkRegex()
 
   const linkClass = classNames({
     "font-bold uppercase text-xl lg:text-sm lg:py-3 lg:px-1": true,
-    "text-green-dark hover:text-coral": true,
+    "lg:text-white text-green-dark hover:text-coral": true,
   })
 
   const itemClass = classNames({
@@ -19,7 +19,8 @@ const NavItem = ({ title, url, children }) => {
   return (
     <li className={itemClass}>
       {hasMailTo(url) && (
-        <a href={url} className={linkClass}>
+        <a href={url} className={isSticky ? "text-green-dark" :
+        "font-bold uppercase text-xl lg:text-sm lg:py-3 lg:px-1 lg:text-white text-green-dark hover:text-coral"}>
           {title}
         </a>
       )}
