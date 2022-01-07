@@ -4,8 +4,17 @@ import { StaticImage } from "gatsby-plugin-image"
 import * as Grid from "../../components/ui/grid"
 import Section from "../../components/ui/section"
 import Button from "../../components/ui/button"
+import AOS from 'aos';
 
 const TopSection = () => {
+  React.useEffect(() => {
+      AOS.init({
+        duration: 1000,
+          delay: 50,
+          once: true
+      });
+      AOS.refresh();
+  }, [])
     return (
 
 
@@ -14,8 +23,14 @@ const TopSection = () => {
           <Grid.Inner className="p-12 md:p-24">
            
             <Grid.Row>
-              <Grid.Col size="w-full lg:w-1/2">
+              <Grid.Col size="w-full lg:w-1/2"            
+              >
                 <Grid.Inner>
+                <div className="w-full"
+               data-aos="fade-right"
+               data-aos-delay="200"
+               data-aos-duration="1500"
+               >
                 <h2 className="mb-8 lg:pr-12">
                 The Modern cost Observibility platform for 
                 <span class="relative"> FinOps
@@ -34,6 +49,7 @@ const TopSection = () => {
   <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
   <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
 </svg> Schedule a 1:1</Button>
+</div>
                 </Grid.Inner>
               </Grid.Col>
 
@@ -42,7 +58,14 @@ const TopSection = () => {
           </Grid.Inner>
         </Grid.Container>
         <div className="lg:absolute lg:top-12 lg:right-0 lg:w-2/4 lg:mt-3">
-        <StaticImage src="../../assets/images/dashbord.png" alt="" />
+          <div className="w-full"
+               data-aos="fade-left"
+               data-aos-delay="200"
+               data-aos-duration="1500"
+               >
+          <StaticImage src="../../assets/images/dashbord.png" alt=""/>
+          </div>
+        
         </div>
       </Section>
 

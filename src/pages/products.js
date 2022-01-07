@@ -14,8 +14,6 @@ import Revolution from "../components/products/revolution"
 
 
 const Products = ({ location }) => {
-
-
   return (
     <Layout
       location={location}
