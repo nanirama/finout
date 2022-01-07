@@ -8,3 +8,15 @@ $slick-loader-path: "~slick-carousel/slick/";
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+header.fixed {
+	nav {
+		ul {
+			li {
+				a {
+					color: #1B1F1D;
+				}
+			}
+		}
+	}
+}
