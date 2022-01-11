@@ -1,6 +1,6 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-
+import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as Grid from "../../components/ui/grid"
 import Section from "../../components/ui/section"
 import AOS from 'aos';
@@ -14,6 +14,27 @@ const Revolution = () => {
         });
         AOS.refresh();
     }, [])
+    const { PostImg1, PostImg2, PostImg3 } = useStaticQuery(
+        graphql`
+          query {
+            PostImg1: file(relativePath: {eq: "post-img1.jpg"}) {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, quality: 100)
+              }
+            }
+            PostImg2: file(relativePath: {eq: "post-img2.jpg"}) {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, quality: 100)
+              }
+            }
+            PostImg3: file(relativePath: {eq: "post-img3.jpg"}) {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, quality: 100)
+              }
+            }
+          }
+        `
+      )
     return (
 
 
@@ -49,7 +70,8 @@ const Revolution = () => {
                 <a class="group flex flex-wrap col-start-1 col-end-4 bg-white text-left shadow-xl rounded-xl overflow-hidden transform transition duration-300 ease-out md:flex-col md:col-start-auto md:col-end-auto md:grid-cols-full md:col-start-auto md:col-end-auto h-full" href="#">
         <div class="w-full">
             
-        <StaticImage src="../../assets/images/post-img1.jpg" alt="" />
+        
+        <GatsbyImage image={getImage(PostImg1)} />
         <div class="flex flex-col p-6 lg:flex-1 w-full md:px-10 md:py-8">
             <time class="font-medium text-xs text-gray mb-2.5 uppercase">Dec 15th, 2021</time>
             <h2 class="font-display text-2xl text-green-dark transition group-hover:text-black">Why did we prioritize support for Snowflake in our FinOps Observability platform?</h2>
@@ -68,7 +90,7 @@ const Revolution = () => {
                 <a class="group flex flex-wrap col-start-1 col-end-4 bg-white text-left shadow-xl rounded-xl overflow-hidden transform transition duration-300 ease-out md:flex-col md:col-start-auto md:col-end-auto md:grid-cols-full md:col-start-auto md:col-end-auto h-full" href="#">
         <div class="w-full">
             
-        <StaticImage src="../../assets/images/post-img2.jpg" alt="" />
+        <GatsbyImage image={getImage(PostImg2)} />
         <div class="flex flex-col p-6 lg:flex-1 w-full md:px-10 md:py-8">
             <time class="font-medium text-xs text-gray mb-2.5 uppercase">Dec 9th, 2021</time>
             <h2 class="font-display text-2xl text-green-dark transition group-hover:text-black">How redesigning our Navigation Bar improved Finout’s UX</h2>
@@ -87,7 +109,7 @@ const Revolution = () => {
                 <a class="group flex flex-wrap col-start-1 col-end-4 bg-white text-left shadow-xl rounded-xl overflow-hidden transform transition duration-300 ease-out md:flex-col md:col-start-auto md:col-end-auto md:grid-cols-full md:col-start-auto md:col-end-auto h-full" href="#">
         <div class="w-full">
             
-        <StaticImage src="../../assets/images/post-img1.jpg" alt="" />
+        <GatsbyImage image={getImage(PostImg1)} />
         <div class="flex flex-col p-6 lg:flex-1 w-full md:px-10 md:py-8">
             <time class="font-medium text-xs text-gray mb-2.5 uppercase">Dec 15th, 2021</time>
             <h2 class="font-display text-2xl text-green-dark transition group-hover:text-black">Kubernetes: A Cost Challenge Waiting to Happen</h2>

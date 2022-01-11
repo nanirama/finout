@@ -49,7 +49,7 @@ const Slides = () => {
 return( 
 
 <Section className="relative mb:py-28">
-<div class="absolute z-1 left-0 w-full bg-pink-100 h-24"></div>
+<div class="absolute z-1 left-0 w-full bg-pink h-24"></div>
    <Slider {...settings} className="slides d-flex align-items-stretch z-0">
       <div className="flex flex-col w-full h-full p-8 bg-white rounded-lg drop-shadow-xl mb-12">
          <h4>Devops</h4>

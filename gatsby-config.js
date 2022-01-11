@@ -128,8 +128,19 @@ module.exports = {
         offset: -150,
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
+          quality: 100,
+          backgroundColor: `transparent`,
+          webpOptions: {quality: 100}
+        }
+      }
+    },
+    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-plugin-mdx",
       options: {
@@ -158,6 +169,14 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
+        path: "./src/images/",
+      },
+      __key: "images",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "assets",
         path: "./src/images/",
       },
       __key: "images",
