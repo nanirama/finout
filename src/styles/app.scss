@@ -97,7 +97,13 @@ header.fixed {
 	background-color: #FFFCF2;
 }
 
-.shape{background-image: url(../images/shape.png); background-repeat: no-repeat; width: 125px; height: 120px;
-background-size:cover; background-position: center center;}
+.shape{
+	background-image: url(../images/shape.png); 
+	background-repeat: no-repeat; 
+	background-size:cover;
+	width: 125px;
+	height: 120px;  margin-top:-30px;	
+	background-position: center center;
+}
 
 

@@ -103,7 +103,7 @@ const Footer = ({ className }) => {
           </Grid.Col>
 
           <Grid.Col size="w-3/5 lg:w-1/4 xl:w-1/5">
-<h5 className="text-white mb-0">subscribe to our newsletter</h5>
+<h5 className="text-white mb-0">subscribe to out newsletter</h5>
           <form action="#" className="newsform mb-4 mt-1">
                     <div className="flex items-center bg-white shadow-inner rounded-md">
                         <input type="email" placeholder="Enter your email" className="w-full px-2 py-4 mr-2 border-0 focus:outline-none" required/>

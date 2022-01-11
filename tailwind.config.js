@@ -38,6 +38,7 @@ module.exports = {
       fontFamily: {
         sans: ["arboria", ...defaultTheme.fontFamily.sans],
         display: ["arboria", ...defaultTheme.fontFamily.sans],
+        
       },
       fontSize: {
         xs: [".75rem", "1rem"],

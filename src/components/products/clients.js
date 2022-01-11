@@ -56,13 +56,13 @@ const Clients = () => {
           <Grid.Row>
               <Grid.Col size="w-full md:w-1/3 pl-8 pr-8">
               
-              <GatsbyImage className="brightness-125 hover:brightness-50" image={getImage(ClientLogo1)} />
+              <GatsbyImage className="brightness-125 hover:brightness-50 ease-in transition duration-500" image={getImage(ClientLogo1)} />
               </Grid.Col>
               <Grid.Col size="w-full md:w-1/3 pl-8 pr-8">
-              <GatsbyImage className="brightness-125 hover:brightness-50" image={getImage(ClientLogo2)} />
+              <GatsbyImage className="brightness-125 hover:brightness-50 ease-in transition duration-500" image={getImage(ClientLogo2)} />
               </Grid.Col>
               <Grid.Col size="w-full md:w-1/3 pl-8 pr-8">
-              <GatsbyImage className="brightness-125 hover:brightness-50" image={getImage(ClientLogo3)} />
+              <GatsbyImage className="brightness-125 hover:brightness-50 ease-in transition duration-500" image={getImage(ClientLogo3)} />
               </Grid.Col>
               </Grid.Row>
        
