@@ -23,6 +23,10 @@ header.fixed {
 		background-color: #f87979;
 		color: #fff;
 	}
+	.btn.btn-coral:hover{	
+		background-color: #d85e5e;
+		border-color: #d85e5e;
+	}
 }
 
 .slick-slider {
@@ -89,7 +93,7 @@ header.fixed {
 
 .newsform {
 	input {
-		border: 0;
+		border: 0;width:auto;
 	}
 }
 
@@ -97,13 +101,36 @@ header.fixed {
 	background-color: #FFFCF2;
 }
 
-.shape{
-	background-image: url(../images/shape.png); 
-	background-repeat: no-repeat; 
-	background-size:cover;
+.shape {
+	background-image: url(../images/shape.png);
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 125px;
-	height: 120px;  margin-top:-30px;	
+	height: 120px;
+	margin-top: -30px;
 	background-position: center center;
 }
 
+.cardfeature .shadow-xl {
+    --tw-shadow: 11px 12px 25px #19412d1a;
+}
 
+.help{
+	p{
+		font-size:15px;
+	}
+	.shadow-xl {
+		--tw-shadow: 11px 12px 25px #19412d1a;
+	}
+}
+@media only screen and (min-width:1024px) {
+	.cardfeature {
+		h3 {
+			padding: 0 30px;margin-bottom: 15px;
+		}
+		p{
+			color:#aeaeae;	
+		}
+
+	}
+}

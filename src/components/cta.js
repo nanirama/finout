@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS, INLINES } from "@contentful/rich-text-types"
 import * as COLORS from "../shared/colors"
-
+import AOS from 'aos';
 // Components
 import * as Grid from "./ui/grid"
 import Button from "./ui/button"
@@ -35,6 +35,14 @@ const options = {
 }
 
 const Cta = () => {
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1000,
+        delay: 50,
+        once: true
+    });
+    AOS.refresh();
+}, [])
   const { data } = useStaticQuery(
     graphql`
       query {
@@ -66,6 +74,11 @@ const Cta = () => {
     <div className="group relative py-20 bg-green lg:py-28">
       <Decor color={COLORS.green} animated />
       <Grid.Container sm className="text-center">
+      <div className="w-full"
+               data-aos="fade-up"
+               data-aos-delay="200"
+               data-aos-duration="1500"
+               >
         {content && renderRichText(content, options)}
 
         <Button
@@ -73,6 +86,7 @@ const Cta = () => {
           to={buttonPrimary?.url}
           className="mt-12"
         />
+        </div>
       </Grid.Container>
     </div>
   )

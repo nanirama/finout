@@ -11,6 +11,7 @@ import Integration from "../components/products/integration"
 import Monitoring from "../components/products/monitoring"
 import Tabs from "../components/products/tabs"
 import Revolution from "../components/products/revolution"
+import CtaWithPosts from "../components/cta-with-posts"
 
 
 const Products = ({ location }) => {
@@ -32,7 +33,7 @@ const Products = ({ location }) => {
 <Monitoring/>
 <Slides/>
 <Tabs/>
-<Revolution/>
+<CtaWithPosts/>
 
     </Layout>
   )

@@ -10,7 +10,7 @@ import PostProgress from "./ui/post-progress"
 import Logo from "../svg/logo.svg"
 import LogoWhite from "../svg/logo-white.svg"
 
-const Header = ({ postTitle, isSticky, location }) => {
+const Header = ({ postTitle, isSticky,location }) => {
   const path = location.pathname
   const [isNavOpen, setisNavOpen] = React.useState(false)
 
@@ -44,7 +44,7 @@ const Header = ({ postTitle, isSticky, location }) => {
           }
          </Link>
 
-         <Nav isOpen={isNavOpen} isSticky={isSticky}  />
+         <Nav isOpen={isNavOpen} isSticky={isSticky} path={path} />
 
          <NavToggler
            onClick={() => setisNavOpen(!isNavOpen)}
@@ -53,6 +53,8 @@ const Header = ({ postTitle, isSticky, location }) => {
         </div>
       </div>
       {postTitle && <PostProgress title={postTitle} />}
+
+      
     </header>
 
 

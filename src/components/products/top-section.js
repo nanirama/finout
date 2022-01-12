@@ -46,16 +46,13 @@ const TopSection = () => {
                 <h2 className="mb-8 lg:pr-12 text-4xl">
                 The Modern cost Observibility platform for 
                 <span class="relative"> FinOps
-                {/* <svg class="absolute left-0 h-auto w-[105%]" width="50" height="7" viewBox="0 0 50 7" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.3277 3.14054C11.4815 3.66293 4.42524 5.00412 1.04901 6.45146L0 4.00442C3.81725 2.36802 11.256 1.0092 20.1708 0.482765C29.1338 -0.0465213 39.7522 0.256196 50 2.03741L49.5441 4.66048C39.5343 2.92066 29.1256 2.62101 20.3277 3.14054Z" fill="#F87979"></path></svg> */}
                 <div className="absolute right-0 -mt-4 -z-1">
                 <svg width="120" height="20" viewBox="0 0 185 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7 13C55.5 4.99999 117.5 5 178 13" stroke="#F87979" stroke-width="14" stroke-linecap="round"/>
 </svg>
 </div>
-
-                
-                </span>
-                </h2>
+ </span>
+ </h2>
 <p className="mb-4 font-normal text-md">Finout is the first self-service, zero-code, cloud cost observability platform that combines business metrics with your cost, slicing it up to customers, features and unit metrics.
 </p>
 

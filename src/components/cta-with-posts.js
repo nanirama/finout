@@ -2,7 +2,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Slider from "react-slick"
 import * as COLORS from "../shared/colors"
-
+import AOS from 'aos';
 // Components
 import Button from "./ui/button"
 import * as Grid from "./ui/grid"
@@ -11,6 +11,14 @@ import Cta from "./cta"
 import BgExtension from "./ui/bg-extension"
 
 const CtaWithPosts = () => {
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1000,
+        delay: 50,
+        once: true
+    });
+    AOS.refresh();
+}, [])
   const data = useStaticQuery(
     graphql`
       query {
@@ -78,6 +86,11 @@ const CtaWithPosts = () => {
         <BgExtension color={COLORS.green} />
 
         <Grid.Container md className="text-center">
+        <div className="w-full"
+               data-aos="fade-down"
+               data-aos-delay="200"
+               data-aos-duration="1500"
+               >
           <div className="-mx-4 pb-8 overflow-hidden lg:mx-0 lg:pb-8 lg:overflow-visible">
             <Slider
               {...settings}
@@ -106,6 +119,7 @@ const CtaWithPosts = () => {
             to="/blog"
             className="hidden mt-8 lg:inline-block"
           />
+          </div>
         </Grid.Container>
       </div>
     </div>

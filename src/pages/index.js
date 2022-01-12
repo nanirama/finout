@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Slider from "react-slick"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
-
+import AOS from 'aos';
 // Components
 import * as Grid from "../components/ui/grid"
 import Layout from "../components/layout"
@@ -24,6 +24,15 @@ import Video from "../components/ui/video"
 import defaultThumbnail from "../images/thumbnail-finout.png"
 
 const Index = ({ data, location }) => {
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1000,
+        delay: 50,
+        once: true
+    });
+    AOS.refresh();
+}, [])
+
   const breakpoints = useBreakpoint()
   const title = data?.page?.title || ""
   const description = data?.page?.description || ""
@@ -58,7 +67,12 @@ const Index = ({ data, location }) => {
         url={location.href}
       />
 
-      <Section className="py-16 bg-green-light overflow-hidden md:py-24 2xl:py-28">
+      <Section className="py-16 bg-green-light overflow-hidden">
+      <div className="w-full"
+        data-aos="fade-down"
+        data-aos-delay="200"
+        data-aos-duration="1500"
+      >
         <Slider {...settings}>
           {testimonials &&
             testimonials.map(testimonial => (
@@ -71,12 +85,18 @@ const Index = ({ data, location }) => {
               />
             ))}
         </Slider>
+        </div>
       </Section>
 
-      <Section className="relative">
+      <Section className="relative cardfeature">
         <BgExtension />
-
-        <Grid.Container md className="relative z-10">
+       
+        <Grid.Container md className="relative z-10 cardfeature">
+        <div className="w-full"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="1500"
+      >
           <Grid.Grid lg={3}>
             {features &&
               features.map(card => (
@@ -85,15 +105,23 @@ const Index = ({ data, location }) => {
                   icon={card?.image?.file?.url}
                   title={card?.title}
                   description={card?.content}
+                                   
                 />
               ))}
           </Grid.Grid>
+          </div>
         </Grid.Container>
+       
       </Section>
 
-      <Section className="py-24 2xl:py-28">
+      <Section className="py-24 lg:py-32">
         <Grid.Container md className="text-center">
-          <h2 className="max-w-md mx-auto">{featureSpotlightTitle}</h2>
+        <div className="w-full"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="1500"
+      >
+          <h2 className="max-w-md mx-auto text-4xl">{featureSpotlightTitle}</h2>
 
           <div className="my-12"></div>
 
@@ -114,13 +142,19 @@ const Index = ({ data, location }) => {
           <Button
             title={featureSpotlightButton?.title}
             to={featureSpotlightButton?.url}></Button>
+            </div>
         </Grid.Container>
       </Section>
 
-      <Section className="group relative py-24 bg-green-light 2xl:py-28">
+      <Section className="help group relative py-24 bg-green-light 2xl:py-28">
         <Decor animated />
 
         <Grid.Container xs className="text-center">
+        <div className="w-full"
+        data-aos="fade-down"
+        data-aos-delay="200"
+        data-aos-duration="1500"
+      >
           <h2 className="font-medium mb-10 2xl:mb-14">{servicesTitle}</h2>
 
           <Grid.Grid xs={2} md={3}>
@@ -137,6 +171,7 @@ const Index = ({ data, location }) => {
             title={servicesButton?.title}
             className="mt-16"
           />
+          </div>
         </Grid.Container>
       </Section>
     </Layout>

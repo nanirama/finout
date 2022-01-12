@@ -33,6 +33,9 @@ module.exports = {
           DEFAULT: "rgba(255, 255, 255, 0)",
           dark: "rgba(0, 0, 0, 0)",
         },
+        current: {
+          DEFAULT: "#e7e7e7",
+        },
         red: "#d85e5e",
       },
       fontFamily: {
