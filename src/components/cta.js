@@ -18,7 +18,6 @@ const options = {
       if (type !== "ContentfulTextDecor") {
         return children
       }
-
       return <TextDecor>{node?.data?.target?.content}</TextDecor>
     },
     [BLOCKS.HEADING_2]: (node, children) => {
@@ -33,7 +32,6 @@ const options = {
     },
   },
 }
-
 const Cta = () => {
   React.useEffect(() => {
     AOS.init({
@@ -66,10 +64,8 @@ const Cta = () => {
       }
     `
   )
-
   const content = data?.content || null
   const buttonPrimary = data?.buttonPrimary || null
-
   return (
     <div className="group relative py-20 bg-green lg:py-28">
       <Decor color={COLORS.green} animated />
@@ -91,5 +87,4 @@ const Cta = () => {
     </div>
   )
 }
-
 export default Cta
