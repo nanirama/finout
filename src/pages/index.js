@@ -2,7 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import Slider from "react-slick"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
-import AOS from 'aos';
+
 // Components
 import * as Grid from "../components/ui/grid"
 import Layout from "../components/layout"
@@ -24,14 +24,7 @@ import Video from "../components/ui/video"
 import defaultThumbnail from "../images/thumbnail-finout.png"
 
 const Index = ({ data, location }) => {
-  React.useEffect(() => {
-    AOS.init({
-      duration: 1000,
-        delay: 50,
-        once: true
-    });
-    AOS.refresh();
-}, [])
+
 
   const breakpoints = useBreakpoint()
   const title = data?.page?.title || ""
@@ -68,11 +61,7 @@ const Index = ({ data, location }) => {
       />
 
       <Section className="py-16 bg-green-light overflow-hidden">
-      <div className="w-full"
-        data-aos="fade-down"
-        data-aos-delay="200"
-        data-aos-duration="1500"
-      >
+      <div className="w-full">
         <Slider {...settings}>
           {testimonials &&
             testimonials.map(testimonial => (
@@ -92,11 +81,7 @@ const Index = ({ data, location }) => {
         <BgExtension />
        
         <Grid.Container md className="relative z-10 cardfeature">
-        <div className="w-full"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1500"
-      >
+        <div className="w-full">
           <Grid.Grid lg={3}>
             {features &&
               features.map(card => (
@@ -116,11 +101,7 @@ const Index = ({ data, location }) => {
 
       <Section className="py-24 lg:py-32">
         <Grid.Container md className="text-center">
-        <div className="w-full"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1500"
-      >
+        <div className="w-full">
           <h2 className="max-w-md mx-auto text-4xl">{featureSpotlightTitle}</h2>
 
           <div className="my-12"></div>
@@ -150,11 +131,7 @@ const Index = ({ data, location }) => {
         <Decor animated />
 
         <Grid.Container xs className="text-center">
-        <div className="w-full"
-        data-aos="fade-down"
-        data-aos-delay="200"
-        data-aos-duration="1500"
-      >
+        <div className="w-full">
           <h2 className="font-medium mb-10 2xl:mb-14">{servicesTitle}</h2>
 
           <Grid.Grid xs={2} md={3}>

@@ -1,55 +1,18 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as Grid from "../../components/ui/grid"
 import Section from "../../components/ui/section"
-import AOS from 'aos';
+import Aws from "../../images/aws.svg";
+import Kubernet from "../../images/kubernet.svg";
+import SnowFlake from "../../images/snowflake.svg";
+import DataDog from "../../images/datadog.svg";
 const Monitoring = () => {
-React.useEffect(() => {
-AOS.init({
-duration: 1000,
-delay: 50,
-once: true
-});
-AOS.refresh();
-}, [])
-const { Aws, Kubernet, SnowFlake, DataDog } = useStaticQuery(
-  graphql`
-  query {
-    Aws: file(relativePath: {eq: "aws.png"}) {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, quality: 100)
-      }
-    }
-    Kubernet: file(relativePath: {eq: "kubernet.png"}) {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, quality: 100)
-      }
-    }
-    SnowFlake: file(relativePath: {eq: "snowflake.png"}) {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, quality: 100)
-      }
-    }
-    DataDog: file(relativePath: {eq: "datadog.png"}) {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, quality: 100)
-      }
-    }
-  }
-`
-)
 return (
 <Section className="bg-pink pt-16 pb-20 lg:mt-56">
    <div class="container max-w-4xl">
       <Grid.Row>
          <Grid.Col size="w-full lg:w-1/2">
-            <div className="w-full pt-24"
-               data-aos="fade-right"
-               data-aos-delay="200"
-               data-aos-duration="1500"
-               >
-               <h2 className="mb-6 text-5xl leading-tight">
+            <div className="w-full pt-40">
+               <h2 className="mb-6 text-5xl">
                   AWS Cost  <br/>
                   <span class="relative">
                      Observibility
@@ -70,32 +33,20 @@ return (
             </div>
          </Grid.Col>
          <Grid.Col size="w-full lg:w-1/2">
-            <div className="w-full lg:pl-8"
-               data-aos="fade-left"
-               data-aos-delay="200"
-               data-aos-duration="1500"
-               >
-               <GatsbyImage className="lg:-mt-72" image={getImage(Aws)} />
+            <div className="w-full lg:pl-8">
+               <Aws className="lg:-mt-72" />
             </div>
          </Grid.Col>
       </Grid.Row>
       <div className="py-8"></div>
       <Grid.Row>
          <Grid.Col size="w-full lg:w-1/2">
-            <div className="w-full"
-               data-aos="fade-right"
-               data-aos-delay="200"
-               data-aos-duration="1500"
-               >
-               <GatsbyImage className="mb-3" image={getImage(Kubernet)} />
+            <div className="w-full">
+               <Kubernet className="mb-3"/>
             </div>
          </Grid.Col>
          <Grid.Col size="w-full lg:w-1/2">
-            <div className="w-full lg:pl-8"
-               data-aos="fade-left"
-               data-aos-delay="200"
-               data-aos-duration="1500"
-               >
+            <div className="w-full lg:pl-8">
                <h2 className="mb-6 leading-tight text-5xl">
                   Kubernetes <br/>Cost 
                   <span class="relative">
@@ -120,11 +71,7 @@ return (
       <div className="py-8"></div>
       <Grid.Row>
          <Grid.Col size="w-full lg:w-1/2">
-            <div className="w-full"
-               data-aos="fade-right"
-               data-aos-delay="200"
-               data-aos-duration="1500"
-               >
+            <div className="w-full">
                <h2 className="mb-6 leading-tight text-5xl">
                   Snowflake Cost  <br/>
                   <span class="relative">
@@ -146,32 +93,20 @@ return (
             </div>
          </Grid.Col>
          <Grid.Col size="w-full lg:w-1/2">
-            <div className="w-full flex" 
-               data-aos="fade-left"
-               data-aos-delay="200"
-               data-aos-duration="1500"
-               >
-               <GatsbyImage className="mb-3" image={getImage(SnowFlake)} />
+            <div className="w-full flex">
+               <SnowFlake className="mb-3"/>
             </div>
          </Grid.Col>
       </Grid.Row>
       <div className="py-8"></div>
       <Grid.Row>
          <Grid.Col size="w-full lg:w-1/2">
-            <div className="w-full lg:pr-18"
-               data-aos="fade-right"
-               data-aos-delay="200"
-               data-aos-duration="1500"
-               >
-               <GatsbyImage className="mb-3" image={getImage(DataDog)} />
+            <div className="w-full lg:pr-18">
+               <DataDog className="mb-3"/>
             </div>
          </Grid.Col>
          <Grid.Col size="w-full lg:w-1/2">
-            <div className="w-full"
-               data-aos="fade-left"
-               data-aos-delay="200"
-               data-aos-duration="1500"
-               >
+            <div className="w-full">
                <h2 className="mb-6 leading-tight text-5xl">
                   Datadog Cost <br/>
                   <span class="relative">

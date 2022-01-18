@@ -5,51 +5,56 @@ import * as Grid from "../../components/ui/grid"
 import Section from "../../components/ui/section"
 import Button from "../../components/ui/button"
 import AOS from 'aos';
+
+import Dashboard from "../../images/dashbord.svg";
+
 const TopSection = () => {
-React.useEffect(() => {
-AOS.init({
-duration: 1000,
-delay: 50,
-once: true
-});
-AOS.refresh();
-}, [])
-const { DashboardImg } = useStaticQuery(
-  graphql`
-  query {
-    DashboardImg: file(relativePath: {eq: "dashbord.png"}) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+  React.useEffect(() => {
+      AOS.init({
+        duration: 1000,
+          delay: 50,
+          once: true
+      });
+      AOS.refresh();
+  }, [])
+
+  const { DashboardImg } = useStaticQuery(
+    graphql`
+      query {
+        DashboardImg: file(relativePath: {eq: "dashbord.svg"}) {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+          }
+        }
       }
-    }
-  }
-`
-)
-return (
-<Section className="bg-yellow-300 relative py-9">
-   <Grid.Container md className="relative">
-      <Grid.Inner className="p-12 md:p-24">
+    `
+  )
+    return (
+
+
+      <Section className="bg-yellow-300 relative pt-16 pb-8">
+
+<Grid.Container xl className="relative px-0">
+      <Grid.Inner className="">
          <Grid.Row>
-            <Grid.Col size="w-full lg:w-1/2"            
-               >
-               <Grid.Inner>
-                  <div className="w-full"
-                     data-aos="fade-right"
-                     data-aos-delay="200"
-                     data-aos-duration="1500"
-                     >
-                     <h2 className="mb-8 lg:pr-12 text-4xl">
+            <Grid.Col size="w-full lg:w-1/2 flex items-center">
+               <Grid.Inner className="flex justify-center">
+                  <div className="w-full flex flex-col pl-40 pr-8">
+                     <h2 className="mb-8 text-4xl relative z-20">
                         The Modern cost Observibility platform for 
-                        <span class="relative">
-                           FinOps
-                           <div className="absolute right-0 -mt-4 -z-1">
+                           <span class="relative">
+                            FinOps
+                           <div className="absolute right-0 -bottom-2 -z-1">
                               <svg width="120" height="20" viewBox="0 0 185 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M7 13C55.5 4.99999 117.5 5 178 13" stroke="#F87979" stroke-width="14" stroke-linecap="round"/>
                               </svg>
+                             
+
                            </div>
                         </span>
                      </h2>
                      <p className="mb-4 font-normal text-md">Finout is the first self-service, zero-code, cloud cost observability platform that combines business metrics with your cost, slicing it up to customers, features and unit metrics.</p>
+                     <div className="flex flex-row">
                      <Button className="mt-4 p-2 mr-3 rounded text-sm normal-case inline-flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" fill="currentColor" class="bi bi-clock" viewBox="0 0 23 11">
                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
@@ -64,22 +69,29 @@ return (
                         </svg>
                         Schedule a 1:1
                      </Button>
+                     </div>
                   </div>
                </Grid.Inner>
             </Grid.Col>
+            <Grid.Col size="w-full lg:w-1/2 px-0">
+            <div className="dashboard w-full">
+            <Dashboard/>
+             </div>
+               </Grid.Col>
+
          </Grid.Row>
       </Grid.Inner>
    </Grid.Container>
-   <div className="lg:absolute lg:top-12 lg:right-0 lg:w-2/4">
-      <div className="w-full"
-         data-aos="fade-left"
-         data-aos-delay="200"
-         data-aos-duration="1500"
-         >
-         <GatsbyImage image={getImage(DashboardImg)} />
-      </div>
-   </div>
-</Section>
-)
-}
-export default TopSection
+
+
+
+
+      
+      </Section>
+
+
+        )
+    }
+    
+    export default TopSection
+    

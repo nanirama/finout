@@ -133,4 +133,18 @@ header.fixed {
 		}
 
 	}
+
+	.dashboard {
+		margin-left: 22px;
+	}
+	
+
+}
+
+
+.icon {
+	&:hover {
+		fill: #002e42 !important;
+		transition: all .5s ease-in-out;
+	}
 }

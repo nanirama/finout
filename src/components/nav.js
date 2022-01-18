@@ -24,26 +24,15 @@ const Nav = ({ isOpen, isSticky, path }) => {
     `
   )
   let navClass = ''
-  if(path==='/'){
     navClass = classNames({
       "absolute z-998 -right-full top-0 flex justify-between w-full h-screen pt-14 pb-16 bg-white/95 overflow-y-scroll transition-right duration-300 in-expo shadow-xl": true,
       "lg:flex-1 lg:items-center lg:ml-16 2xl:ml-20 lg:flex lg:relative lg:right-auto lg:top-auto lg:w-auto lg:h-auto lg:pt-0 lg:pb-0 lg:bg-none lg:bg-transparent lg:overflow-y-visible lg:shadow-none": true,
       "!right-0": isOpen,
     })
-  }
-  else
-  {
-    navClass = classNames({
-      "absolute z-998 -right-full top-0 w-full h-screen pt-14 pb-16 bg-white/95 overflow-y-scroll transition-right duration-300 in-expo shadow-xl": true,
-      "lg:flex-1 lg:items-center lg:ml-16 2xl:ml-20 lg:flex lg:relative lg:right-auto lg:top-auto lg:w-auto lg:h-auto lg:pt-0 lg:pb-0 lg:bg-none lg:bg-transparent lg:overflow-y-visible lg:shadow-none": true,
-      "!right-0": isOpen,
-    })
-  }
-  
 
   return (
     <nav className={navClass}>
-      <ul className={path==='/' ? "px-4 text-lg mt-6 space-y-4 lg:flex lg:h-auto lg:mt-0 lg:space-x-9 lg:space-y-0 lg:text-base" : "px-4 text-lg ml-auto mt-6 space-y-4 lg:flex lg:h-auto lg:mt-0 lg:space-x-9 lg:space-y-0 lg:text-base"}>
+      <ul className="px-4 text-lg mt-6 space-y-4 lg:flex lg:h-auto lg:mt-0 lg:space-x-9 lg:space-y-0 lg:text-base">
         {site.siteMetadata.menuLinks.map((link, index) => (
           <NavItem key={index} title={link?.title} url={link?.url} />
         ))}

@@ -4,6 +4,8 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+
+// Components
 import * as Grid from "../components/ui/grid"
 import Section from "./ui/section"
 
@@ -19,6 +21,7 @@ const options = {
     },
   },
 }
+
 const HeroCareers = () => {
   const { data } = useStaticQuery(
     graphql`
@@ -39,8 +42,10 @@ const HeroCareers = () => {
       }
     `
   )
+
   const content = data?.heroContent || ""
   const img = data?.featuredImage || null
+
   return (
     <Section className="relative pt-32 pb-64 bg-green">
       {img && (
@@ -53,6 +58,7 @@ const HeroCareers = () => {
           <div className="absolute z-0 left-0 top-0 w-full h-full bg-green-dark/60"></div>
         </div>
       )}
+
       <Grid.Container sm className="relative z-10">
         <Grid.Inner className="text-center">
           {content && renderRichText(content, options)}
@@ -65,4 +71,5 @@ const HeroCareers = () => {
     </Section>
   )
 }
+
 export default HeroCareers
