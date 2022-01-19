@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Section from "../../components/ui/section"
 
-
 const Tabs = ({ color }) => {
   
 const { DashboardImg2 } = useStaticQuery(
@@ -119,7 +118,6 @@ const { DashboardImg2 } = useStaticQuery(
                   Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride  in the solutions we deliver
                   </p>
                   <div className="-mb-9 mt-16">
-                  
                   <GatsbyImage image={getImage(DashboardImg2)} />
                   
                   </div>

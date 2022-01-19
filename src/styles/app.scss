@@ -22,12 +22,30 @@ header.fixed {
 	.btn.btn-coral {
 		background-color: #f87979;
 		color: #fff;
+		&:hover {
+			background-color: #d85e5e;
+			border-color: #d85e5e;
+			color: #fff;
+		}
 	}
-	.btn.btn-coral:hover{	
-		background-color: #d85e5e;
-		border-color: #d85e5e;
+	.btn.btn-coral.login {
+		&:hover {
+			background-color: #d85e5e;
+			border-color: #d85e5e;
+			color: #fff;
+		}
+		background-color: transparent;
+		color: #000;
 	}
 }
+
+.btn.btn-coral.login {
+	background-color: transparent;
+	&:hover {
+		background-color: #f87979;
+	}
+}
+
 
 .slick-slider {
 	.slick-prev {
@@ -102,14 +120,22 @@ header.fixed {
 }
 
 .shape {
-	background-image: url(../images/shape.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 125px;
-	height: 120px;
-	margin-top: -30px;
-	background-position: center center;
+	width: 180px;
+	height: 175px;
+	margin-top: -75px;
 }
+@media only screen and (max-width:1023px) {
+	.shape {
+		margin-top: -65px;
+	}
+}
+.shape.-ml-10 {
+	margin-left: -3.5rem;
+}
+.shape.-mr-10 {
+	margin-right: -3.5rem;
+}
+
 
 .cardfeature .shadow-xl {
     --tw-shadow: 11px 12px 25px #19412d1a;
@@ -141,10 +167,39 @@ header.fixed {
 
 }
 
-
 .icon {
 	&:hover {
 		fill: #002e42 !important;
 		transition: all .5s ease-in-out;
 	}
+}
+
+@media only screen and (min-width:1551px) {
+	.hero_banner {
+		padding-bottom: 220px !important;
+	}
+	.top_section {
+		padding:80px 0 70px 0 !important;
+	}
+	.dashboard {
+		margin-left: 63px;
+		svg {
+			height: 600px;
+		}
+	}
+}
+@media only screen and (min-width:1367px) and (max-width:1550px) {
+	.hero_banner {
+		padding-bottom: 220px !important;
+	}
+	.top_section {
+		padding:50px 0 40px 0 !important;
+	}
+	.dashboard {
+		margin-left: 101px;
+		svg {
+			height: 560px;
+		}
+	}
+
 }

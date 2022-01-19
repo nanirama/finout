@@ -1,38 +1,16 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as Grid from "../../components/ui/grid"
 import Section from "../../components/ui/section"
 import Button from "../../components/ui/button"
-import AOS from 'aos';
 
 import Dashboard from "../../images/dashbord.svg";
 
 const TopSection = () => {
-  React.useEffect(() => {
-      AOS.init({
-        duration: 1000,
-          delay: 50,
-          once: true
-      });
-      AOS.refresh();
-  }, [])
-
-  const { DashboardImg } = useStaticQuery(
-    graphql`
-      query {
-        DashboardImg: file(relativePath: {eq: "dashbord.svg"}) {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, quality: 100)
-          }
-        }
-      }
-    `
-  )
+ 
     return (
 
 
-      <Section className="bg-yellow-300 relative pt-16 pb-8">
+      <Section className="bg-yellow-300 relative pt-16 pb-8 top_section">
 
 <Grid.Container xl className="relative px-0">
       <Grid.Inner className="">
@@ -73,7 +51,7 @@ const TopSection = () => {
                   </div>
                </Grid.Inner>
             </Grid.Col>
-            <Grid.Col size="w-full lg:w-1/2 px-0">
+            <Grid.Col size="w-full lg:w-1/2 lg:px-0">
             <div className="dashboard w-full">
             <Dashboard/>
              </div>
@@ -82,11 +60,6 @@ const TopSection = () => {
          </Grid.Row>
       </Grid.Inner>
    </Grid.Container>
-
-
-
-
-      
       </Section>
 
 

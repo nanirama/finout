@@ -6027,7 +6027,7 @@
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-"gatsby-plugin-react-svg@^3.0.1":
+"gatsby-plugin-react-svg@^3.1.0":
   "integrity" "sha512-OiEeTRQ+tzf7YrOnj87uMD6AGRl7BKxogAp1CUDtfiP+WGWZ99S5PeDLHJW5ExxGH1NVzWlNgtJjNmJhDksPhg=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-react-svg/-/gatsby-plugin-react-svg-3.1.0.tgz"
   "version" "3.1.0"

@@ -63,7 +63,7 @@ const HeroIndex = () => {
   const btn = data?.heroButton || ""
 
   return (
-    <section className="relative py-16 overflow-hidden bg-dark lg:pt-32 lg:pb-32">
+    <section className="relative py-16 overflow-hidden bg-dark lg:pt-32 lg:pb-32 hero_banner">
       <Grid.Container className="relative z-10">
         <Grid.Row alignY={POSITIONS.center}>
           <Grid.Col size="w-full lg:w-1/2">

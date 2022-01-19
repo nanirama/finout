@@ -46,7 +46,7 @@ const Nav = ({ isOpen, isSticky, path }) => {
         </Button>
         <Button
           to={site?.siteMetadata?.get}
-          className={isSticky ? "btn btn-coral btn btn-coral btn-lg text-lg lg:btn-outlined-green-dark lg:bg-white lg:text-green lg:btn-sm border-0" : "btn btn-coral btn-lg text-lg lg:btn-outlined-green-dark lg:bg-white lg:text-green lg:btn-sm border-0"}>
+          className={isSticky ? "btn btn-coral btn-lg text-lg lg:btn-outlined-green-dark lg:bg-white lg:text-green lg:btn-sm border-0" : "btn btn-coral btn-lg text-lg lg:btn-outlined-green-dark lg:bg-white lg:text-green lg:btn-sm border-0"}>
           Get Started
         </Button>
       </div>
