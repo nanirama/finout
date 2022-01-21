@@ -119,7 +119,6 @@ const { DashboardImg2 } = useStaticQuery(
                   </p>
                   <div className="-mb-9 mt-16">
                   <GatsbyImage image={getImage(DashboardImg2)} />
-                  
                   </div>
                 </div>
                 <div className={openTab === 2 ? "block mb-10" : "hidden"} id="link2">

@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import {isDesktop, isMobile} from 'react-device-detect';
 import classNames from "classnames"
 
 // Components
@@ -20,12 +21,12 @@ const Header = ({ postTitle, isSticky,location }) => {
     if(isSticky)
     {
       headerClass = 'fixed top-0 left-0 z-50 w-full'
-      headerClassContainer = 'bg-white py-2 lg:py-4 shadow transition animate-fadeIn'
+      headerClassContainer = 'bg-white py-2 lg:py-4 shadow transition animate-fadeIn h-inner'
     }
     else
     {
       headerClass = 'absolute top-0 left-0 z-50 w-full'
-      headerClassContainer = 'relative z-999 py-2 bg-trasparent lg:py-4'
+      headerClassContainer = 'relative z-999 py-2 bg-trasparent lg:py-4 h-inner'
     }
     
   }
@@ -40,7 +41,7 @@ const Header = ({ postTitle, isSticky,location }) => {
               <Title />
             </span>
           {
-            path==='/' && !isSticky ? <LogoWhite className="w-auto" /> : <Logo1 className="w-auto" />
+            path==='/' && !isSticky && !isDesktop ? <LogoWhite className="w-auto" /> : <Logo1 className="w-auto" />
           }
          </Link>
 

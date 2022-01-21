@@ -49,6 +49,7 @@ const CtaWithPosts = () => {
   )
 
   const settings = {
+    arrows:false,
     dots: true,
     infinite: true,
     speed: 300,

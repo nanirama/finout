@@ -7,11 +7,11 @@ import SnowFlake from "../../images/snowflake.svg";
 import DataDog from "../../images/datadog.svg";
 const Monitoring = () => {
 return (
-<Section className="bg-pink pt-16 pb-20 lg:mt-56">
+<Section className="bg-pink pt-16 pb-20 lg:mt-56 aws_outer">
    <div class="container max-w-4xl">
       <Grid.Row>
          <Grid.Col size="w-full lg:w-1/2">
-            <div className="w-full pt-40">
+            <div className="w-full pt-40 aws_blk">
                <h2 className="mb-6 text-5xl">
                   AWS Cost  <br/>
                   <span class="relative">

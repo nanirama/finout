@@ -12,7 +12,6 @@ import Monitoring from "../components/products/monitoring"
 import Tabs from "../components/products/tabs"
 import CtaWithPosts from "../components/cta-with-posts"
 
-
 const Products = ({ location }) => {
   return (
     <Layout
