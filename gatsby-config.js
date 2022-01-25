@@ -81,6 +81,7 @@ module.exports = {
         enableWebVitalsTracking: true,
       },
     },
+    "gatsby-transformer-inline-svg",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",

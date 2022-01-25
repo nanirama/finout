@@ -3,7 +3,7 @@ import Section from "../../components/ui/section"
 import * as Grid from "../../components/ui/grid"
 const Finops = () => {
 return( 
-<Section className="relative mb:py-28">
+<Section className="relative mb:py-28 lg:text-left text-center">
    <div class="absolute z-1 left-0 w-full bg-pink h-24"></div>
    <Grid.Container md>
       <Grid.Grid md={3} lg={3}>

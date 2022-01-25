@@ -19,13 +19,13 @@ import Integration13 from "../../images/integration/logo-p1.png";
 const Integration = () => {
 return (
 <Section className="group relative pt-24 pb-20 text-center">
-   <div class="container lg:max-w-3xl w-full mt-10">
+   <div class="container lg:max-w-3xl w-full lg:mt-10">
       <div className="w-full">
          <TltIcon/>
-         <h2 className="font-bold pb-10 mb-10 text-5xl">Integrations</h2>
-         <div className="relative w-full integration flex lg:flex-row flex-col">
- <Grid.Col size="lg:w-2/5 w-full left_blk">
-  <div className="absolute lef-0">
+         <h2 className="font-bold pb-10 mb-10 text-5xl tlt">Integrations</h2>
+         <div className="relative w-full integration flex md:flex-row flex-col">
+ <Grid.Col size="lg:w-2/5 w-full left_blk px-0">
+  <div className="int_items absolute left-0">
 <div className="int-logo logo1">
 <img src={Integration1} alt="" className="scale-90 hover:scale-110 ease-in-out transition duration-500" />
 </div>
@@ -46,13 +46,13 @@ return (
 </div>
 </div>
  </Grid.Col>
- <Grid.Col size="lg:w-1/5 flex justify-center items-center w-full center_blk">
+ <Grid.Col size="lg:w-1/5 flex justify-center items-center w-full center_blk px-0">
 <div className="int-logo logo7">
-<img src={Integration7} alt="" className="scale-110 hover:scale-125 ease-in-out transition duration-500" />
+<img src={Integration7} alt="" className="md:pt-8 scale-110 hover:scale-125 ease-in-out transition duration-500" />
 </div>
  </Grid.Col>
- <Grid.Col size="lg:w-2/5 w-full right_blk">
- <div className="absolute right-0">
+ <Grid.Col size="lg:w-2/5 w-full right_blk px-0">
+ <div className="int_items absolute right-0">
 <div className="int-logo logo8">
 <img src={Integration8} alt="" className="scale-90 hover:scale-110 ease-in-out transition duration-500" />
 </div>
