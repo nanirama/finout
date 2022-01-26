@@ -9,16 +9,13 @@ import Dashboard from "../../images/dashbord.svg";
 const TopSection = ({data}) => {
     const { heroHeading, heroShortText, heroImage, heroButton1Link, heroButton2Link } = data;
     return (
-
-
-      <Section className="bg-yellow-300 relative pt-16 pb-8 top_section">
-
+      <Section className="bg-yellow relative pt-16 pb-8 top_section">
 <Grid.Container xl className="relative px-0">
       <Grid.Inner className="">
          <Grid.Row className="lg:-mx-0 xl:-mx-3 mx-0 mr-0">
             <Grid.Col size="w-full lg:w-1/2 flex items-center">
                <Grid.Inner className="flex justify-center lg:text-left text-center">
-                  <div className="w-full flex flex-col xl:pl-40  px-8">
+                  <div className="w-full flex flex-col xl:pl-40 xl:pr-16 lg:mt-12 xl:pt-10 px-8">
                      <h2 className="mb-8 text-4xl relative z-20">
                         {heroHeading && heroHeading}
                            <span class="relative">
@@ -52,17 +49,14 @@ const TopSection = ({data}) => {
                </Grid.Inner>
             </Grid.Col>
             <Grid.Col size="w-full lg:w-1/2 lg:px-0 lg:mt-0 mt-5">
-               <div className="dashboard w-full">
-               {/* <Dashboard/> */}
-               {/* <img src={heroImage.file.url}/> */}
-               {/* <SvgImage id={heroImage.id}/> */}
-               <GatsbyImage image={getImage(heroImage)} />
-               </div>
             </Grid.Col>
 
          </Grid.Row>
       </Grid.Inner>
    </Grid.Container>
+   <div className="dashboard w-full">
+               <GatsbyImage image={getImage(heroImage)} />
+               </div>
       </Section>
 
 

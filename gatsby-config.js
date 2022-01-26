@@ -30,6 +30,10 @@ module.exports = {
     },
     menuLinks: [
       {
+        title: "Products",
+        url: "/products/",
+      },
+      {
         title: "About",
         url: "/about/",
       },
@@ -46,7 +50,7 @@ module.exports = {
         url: "/contact/",
       },
     ],
-    footerMenuLinks: [
+    footerMenuLinks: [      
       {
         title: "About",
         url: "/about/",

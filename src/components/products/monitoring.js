@@ -16,16 +16,12 @@ return (
       <Grid.Row className="column-reverse">
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full pt-40 aws_blk">
-               <h2 className="mb-6 text-5xl">
+               <h2 className="mb-6 text-5xl relative z-10 inline-block">
                {services[0].title && services[0].title}
-                  <span class="relative">
-                     <div className="absolute right-0 -mt-4 -z-1">
-                      {services[0].featuredImage.id && <SvgImage id={services[0].featuredImage.id}/>} 
-                        {/* <svg width="280" height="23" viewBox="0 0 269 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      {/* {services[0].featuredImage.id && <SvgImage id={services[0].featuredImage.id}/>}  */}
+                        <svg className="absolute left-0 bottom-0 -mt-4 -z-1" width="240" height="23" viewBox="0 0 269 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path d="M7.35938 16C78.3559 4.9776 170.96 3.06059 261.359 16" stroke="#F8CECE" stroke-width="14" stroke-linecap="round"/>
-                        </svg> */}
-                     </div>
-                  </span>
+                        </svg>
                </h2>
                <RichTextContent
                         description={services[0].description}
@@ -37,7 +33,7 @@ return (
          </Grid.Col>
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full lg:pl-8">
-            {services[0].featuredImage.id && <SvgImage id={services[0].featuredImage.id } className="lg:-mt-72 -mt-64"/>} 
+            {services[0].featuredImage.id && <SvgImage id={services[0].featuredImage.id } className="lg:-mt-72 -mt-64 servicesvg"/>} 
                {/* <Aws className="lg:-mt-72 -mt-64" /> */}
             </div>
          </Grid.Col>
@@ -46,21 +42,17 @@ return (
       <Grid.Row>
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full">
-            {services[1].featuredImage.id && <SvgImage id={services[1].featuredImage.id } className="lg:mb-3 mb-10"/>} 
+            {services[1].featuredImage.id && <SvgImage id={services[1].featuredImage.id } className="lg:mb-3 mb-10 servicesvg"/>} 
                {/* <Kubernet className="lg:mb-3 mb-10"/> */}
             </div>
          </Grid.Col>
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full lg:pl-8">
-               <h2 className="mb-6 leading-tight text-5xl">
+               <h2 className="mb-6 leading-tight text-5xl relative z-10 inline-block">
                {services[1].title && services[1].title}
-                  <span class="relative">
-                     <div className="absolute right-0 -mt-4 -z-1">
-                        <svg width="240" height="23" viewBox="0 0 269 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="absolute left-0 bottom-0 -mt-4 -z-1" width="240" height="23" viewBox="0 0 269 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path d="M7.35938 16C78.3559 4.9776 170.96 3.06059 261.359 16" stroke="#F8CECE" stroke-width="14" stroke-linecap="round"/>
                         </svg>
-                     </div>
-                  </span>
                </h2>
                <RichTextContent
                         description={services[1].description}
@@ -75,15 +67,11 @@ return (
       <Grid.Row className="column-reverse">
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full">
-               <h2 className="mb-6 leading-tight text-5xl">
+               <h2 className="mb-6 leading-tight text-5xl relative z-10 inline-block">
                {services[2].title && services[2].title}
-                  <span class="relative">
-                     <div className="absolute right-0 -mt-4 -z-1">
-                        <svg width="240" height="23" viewBox="0 0 269 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="absolute left-0 bottom-0 -mt-4 -z-1" width="240" height="23" viewBox="0 0 269 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path d="M7.35938 16C78.3559 4.9776 170.96 3.06059 261.359 16" stroke="#F8CECE" stroke-width="14" stroke-linecap="round"/>
                         </svg>
-                     </div>
-                  </span>
                </h2>
                <RichTextContent
                         description={services[2].description}
@@ -99,7 +87,7 @@ return (
          </Grid.Col>
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full flex">
-            {services[2].featuredImage.id && <SvgImage id={services[2].featuredImage.id } className="lg:mb-3 mb-10"/>} 
+            {services[2].featuredImage.id && <SvgImage id={services[2].featuredImage.id } className="lg:mb-3 mb-10 servicesvg"/>} 
                {/* <SnowFlake className="lg:mb-3 mb-10"/> */}
             </div>
          </Grid.Col>
@@ -108,21 +96,17 @@ return (
       <Grid.Row>
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full lg:pr-18">
-            {services[3].featuredImage.id && <SvgImage id={services[3].featuredImage.id } className="lg:mb-3 mb-10"/>} 
+            {services[3].featuredImage.id && <SvgImage id={services[3].featuredImage.id } className="lg:mb-3 mb-10 servicesvg"/>} 
                {/* <DataDog className="lg:mb-3 mb-10"/> */}
             </div>
          </Grid.Col>
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full">
-               <h2 className="mb-6 leading-tight text-5xl">
+               <h2 className="mb-6 leading-tight text-5xl relative z-10 inline-block">
                {services[3].title && services[3].title}
-                  <span class="relative">
-                     <div className="absolute right-0 -mt-4 -z-1">
-                        <svg width="240" height="23" viewBox="0 0 269 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="absolute left-0 bottom-0 -mt-4 -z-1" width="240" height="23" viewBox="0 0 269 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path d="M7.35938 16C78.3559 4.9776 170.96 3.06059 261.359 16" stroke="#F8CECE" stroke-width="14" stroke-linecap="round"/>
                         </svg>
-                     </div>
-                  </span>
                </h2>
                <RichTextContent
                         description={services[3].description}

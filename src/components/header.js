@@ -30,7 +30,21 @@ const Header = ({ postTitle, isSticky,location }) => {
     }
     
   }
-
+  const SiteLogo = ()=>{
+    if(path==='/' && !isSticky){
+      return(
+        <>
+        <Logo1 className="w-auto hidden sm:block lg:hidden" />  
+        <LogoWhite className="hidden lg:block sm:hidden" />        
+        </>
+      )
+      
+    }
+    else
+    {
+      return <Logo1 className="w-auto" />  
+    }
+  }
 
   return (
     <header className={headerClass}>
@@ -40,9 +54,7 @@ const Header = ({ postTitle, isSticky,location }) => {
           <span className="sr-only">
               <Title />
             </span>
-          {
-            path==='/' && !isSticky && !isDesktop ? <LogoWhite className="w-auto" /> : <Logo1 className="w-auto" />
-          }
+            <SiteLogo />          
          </Link>
 
          <Nav isOpen={isNavOpen} isSticky={isSticky} path={path} />

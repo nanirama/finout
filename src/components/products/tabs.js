@@ -7,7 +7,7 @@ import SvgImage from "../svgImage"
 
 const Tabs = ({ data, color }) => {
   const { howItWorksHeading, howItWorksFeatures } = data;
-  console.log('how it works',howItWorksFeatures)
+  //console.log('how it works',howItWorksFeatures)
   
 const { DashboardImg2 } = useStaticQuery(
   graphql`

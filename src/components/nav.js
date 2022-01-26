@@ -25,7 +25,7 @@ const Nav = ({ isOpen, isSticky, path }) => {
   )
   let navClass = ''
     navClass = classNames({
-      "absolute z-998 -right-full top-0 flex justify-between w-full h-screen pt-14 pb-16 bg-white/95 overflow-y-scroll transition-right duration-300 in-expo shadow-xl": true,
+      "absolute z-998 -right-full top-0 flex justify-between w-full h-screen pt-14 pb-16 bg-white overflow-y-scroll transition-right duration-300 in-expo shadow-xl": true,
       "lg:flex-1 lg:items-center lg:ml-16 2xl:ml-20 lg:flex lg:relative lg:right-auto lg:top-auto lg:w-auto lg:h-auto lg:pt-0 lg:pb-0 lg:bg-none lg:bg-transparent lg:overflow-y-visible lg:shadow-none": true,
       "!right-0": isOpen,
     })
@@ -51,7 +51,7 @@ const Nav = ({ isOpen, isSticky, path }) => {
         </Button>
       </div>
       </div>
-      {/* <div className="fixed bottom-12 w-full mt-6 ml-auto text-center px-4 space-y-4 lg:static lg:w-auto lg:mt-0 lg:ml-5 lg:px-0 lg:space-y-0 lg:space-x-4">
+      {/* <div className="fixed bottom-12 w-full mt-6 ml-auto text-center px-4 space-y-4 lg:static lg:w-auto lg:mt-0 lg:px-0 lg:space-y-0 lg:space-x-4">
         <Button
           to={site?.siteMetadata?.login}
           className="btn-coral btn-lg text-sm lg:btn-outlined-green-dark lg:btn-sm">

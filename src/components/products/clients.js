@@ -18,7 +18,7 @@ return (
    <div class="container max-w-3xl">
       <div className="w-full">
       <TltIcon/>
-         <h2 className="font-bold text-40xl mb-6 lg:mb-16">{clientsHeading ? clientsHeading : 'Our Clients'}</h2>
+         <h2 className="font-bold text-40xl mb-10 lg:mb-16">{clientsHeading ? clientsHeading : 'Our Clients'}</h2>
          <Grid.Row className=" flex justify-items-stretch">
             {clientsLogos && clientsLogos.map((item,index)=>{
                console.log('Item', item)

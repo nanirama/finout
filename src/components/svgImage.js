@@ -3,7 +3,7 @@ import propTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 // Render inline SVG with fallback non-svg images
 function SvgImage({ id, className }) {
-    console.log('ID', id)
+    //console.log('ID', id)
     const { AllAssets } = useStaticQuery(
         graphql`
           query {
@@ -35,7 +35,7 @@ function SvgImage({ id, className }) {
           }
         `
       )
-    console.log('AllAssets',AllAssets)
+    //console.log('AllAssets',AllAssets)
     const SvgImg = AllAssets.edges.find(({node})=>{
         return node.id===id
     })

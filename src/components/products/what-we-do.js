@@ -14,7 +14,7 @@ return (
          {/* <img src={whatWeDoImage.file.url}/> */}
          <h2 className="font-bold text-40xl mb-8">{whatWeDoHeading && whatWeDoHeading}</h2>
          <div className="lg:w-3/4 m-auto">
-            <div class="whatwedo_img relative flex justify-center">
+            <div class="whatwedo_img relative flex justify-center lg:mb-0 mb-8">
             {/* <Fac/> */}
             <img src={whatWeDoImage.file.url}/>
             </div>

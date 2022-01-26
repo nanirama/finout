@@ -52,7 +52,7 @@ const HeroIndex = () => {
   const btn = data?.heroButton || ""
 
   return (
-    <section className="relative py-16 overflow-hidden bg-green lg:py-20 2xl:py-24 hero_banner">
+    <section className="relative py-16 overflow-hidden lg:py-20 2xl:py-24 hero_banner">
       <Grid.Container className="relative z-10">
         <Grid.Row alignY={POSITIONS.center}>
           <Grid.Col size="w-full lg:w-2/5 xl:w-2/6">
@@ -136,7 +136,7 @@ const HeroIndex = () => {
         <VideoHero
           src={videoMobile}
           poster={videoMobileThumbnail}
-          className="hero-video absolute object-cover z-0 !w-full bottom-0 left-0 right-0 !h-full !-top-24 lg:hidden"
+          className="hero-video absolute object-cover z-0 !w-full bottom-0 left-0 right-0 !h-[calc(100%+64px)] !-top-24 lg:hidden"
           autoPlay
         />
       )}

@@ -63,7 +63,7 @@ const Footer = ({ className }) => {
       <Grid.Container>
         <Grid.Row>
           <Grid.Col size="w-2/5 lg:w-1/4 xl:w-2/5">
-            <Grid.Inner className="w-full h-full pb-8 text-green-light lg:pb-0 lg:pr-14 xl:pr-16">
+            <Grid.Inner className="w-full h-full pb-8 text-green-light lg:pb-0 xl:pr-16">
               <Link to="/" className="inline-block">
                 <span className="sr-only">
                   <Title />
@@ -103,7 +103,7 @@ const Footer = ({ className }) => {
           </Grid.Col>
 
           <Grid.Col size="w-3/5 lg:w-1/4 xl:w-1/5">
-          <form action="#" className="newsform mb-4 hidden lg:block">
+          <form action="#" className="newsform form2 mb-4 hidden lg:block">
           <h5 className="text-white mb-1">subscribe to our newsletter</h5>
                     <div className="flex items-center justify-between bg-white shadow-inner rounded-md">
                         <input type="email" placeholder="Enter your email" className="w-full px-2 py-4 mr-2 border-0 focus:outline-none" required/>
