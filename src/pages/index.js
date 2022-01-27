@@ -22,6 +22,10 @@ import infographic from "../images/infographic.mp4"
 import infographicMobile from "../images/infographic-mobile.mp4"
 import Video from "../components/ui/video"
 import defaultThumbnail from "../images/thumbnail-finout.png"
+import Andree from "../images/andree.svg"
+
+import ClientLogos from "../components/clientlogos"
+
 
 const Index = ({ data, location }) => {
 
@@ -59,8 +63,8 @@ const Index = ({ data, location }) => {
         image={thumbnail}
         url={location.href}
       />
-
-      <Section className="py-16 bg-green-light overflow-hidden">
+<ClientLogos/>
+      <Section className="py-20 bg-green-light overflow-hidden">
       <div className="w-full">
         <Slider {...settings}>
           {testimonials &&
@@ -73,9 +77,17 @@ const Index = ({ data, location }) => {
                 className="max-w-4xl mx-auto pb-6"
               />
             ))}
-        </Slider>
+             </Slider>
+             <div className="flex flex-col items-center justify-center ">
+             <Andree/>
+             <h4 className="my-2">Andreessen Horowitz</h4>
+             <p className="font-bold text-md text-center text-gray-500">Finout, A FinOps Cloud Cost Observability Platform</p>
+             </div>
         </div>
       </Section>
+
+
+      
 
       <Section className="relative cardfeature">
         <BgExtension />
@@ -127,14 +139,14 @@ const Index = ({ data, location }) => {
         </Grid.Container>
       </Section>
 
-      <Section className="help group relative py-24 bg-green-light 2xl:py-28">
+      <Section className="help group relative py-24 md:bg-white bg-green-light 2xl:py-28">
         <Decor animated />
 
         <Grid.Container xs className="text-center">
         <div className="w-full">
-          <h2 className="font-medium mb-10 2xl:mb-14">{servicesTitle}</h2>
+          <h2 className="font-medium mb-14 2xl:mb-14">{servicesTitle}</h2>
 
-          <Grid.Grid xs={2} md={3}>
+          <Grid.Grid xs={2} sm={3}>
             {services &&
               services.map(card => (
                 <Grid.Inner key={card?.id} className="my-2 md:my-3">

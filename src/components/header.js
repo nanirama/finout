@@ -34,7 +34,7 @@ const Header = ({ postTitle, isSticky,location }) => {
     if(path==='/' && !isSticky){
       return(
         <>
-        <Logo1 className="w-auto hidden sm:block lg:hidden" />  
+        <Logo1 className="w-auto lg:hidden" />  
         <LogoWhite className="hidden lg:block sm:hidden" />        
         </>
       )
