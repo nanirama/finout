@@ -482,6 +482,12 @@ header.fixed {
 		.column-reverse {
 			flex-direction: column-reverse;
 		}
+		.servicesvg{
+			justify-content: center;
+				svg{
+					width:70%;
+				}
+		}
 		h2{
 			max-width: 320px;
 			margin: 0 auto 1.5rem auto;
@@ -509,11 +515,15 @@ header.fixed {
 	}
 }
 @media only screen and (max-width:767px) {
+	header{
+		.btn.btn-coral{
+			padding:1rem 3rem;
+		}
+	}
 	.hero_banner {
 		.pb-95{
 			padding-bottom:95%;
 		}
-		
 	}
 	.top_section{
 		.pl-40 {
@@ -612,6 +622,9 @@ header.fixed {
 			top:200px;
 		}
 	}
+	.text-5xl {
+		font-size: 2.6rem;
+	}
 	.text-40xl {
 		font-size: 2rem;
 	}
@@ -641,20 +654,24 @@ header.fixed {
 				  }
 				}
 			}
-		
 	}
 	.clientimg {
 		svg {
 			width: 100%;
 		}
 	}
+	.aws_outer{
+		.servicesvg{
+			svg{
+				width:90%;
+			}
+		}
+	}
 }
-
 @media only screen and (max-width:479px) {
-	header.fixed {
+	header{
 		.btn.btn-coral {
 			font-size: 1rem;
-			padding: 1rem 3rem;
 		}
 	}
 	.hero_banner {
@@ -675,26 +692,24 @@ header.fixed {
 		.grid-cols-2 {
 			grid-template-columns: repeat(1, minmax(0, 1fr));
 		  }
-		.btn.btn-coral{
-			font-size:15px;
-			padding-left: 2rem;
-			padding-right: 2rem;
-		}
+	}
+	.btn.btn-coral{
+		font-size:15px;
+		padding: 1.2rem 2rem;
 	}
 	.text-5xl {
-		font-size: 2.5rem;
+		font-size: 2.2rem;
 	}
 	.text-3xl{
 		font-size:1.5rem;
 	}
-		.feature_box {
+	.feature_box {
 		width: 100%;
 	}
 	.aws_outer{
 		.servicesvg{
 			height: 100%;
 		}
-
 	}
 	.int_items {
 		width: 280px; 
@@ -748,6 +763,11 @@ header.fixed {
 		img{
 			left:88px;
 			top:170px;
+		}
+	}
+	.int-logo.logo7 {
+		img{
+			margin-top:-10px;
 		}
 	}
 	.int-logo.logo8 {

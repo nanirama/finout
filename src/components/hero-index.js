@@ -105,7 +105,7 @@ const HeroIndex = () => {
         </Grid.Row>
       </Grid.Container>
       <div className="absolute bottom-0 left-0 right-0 z-50 max-w-3xl mx-auto text-center">
-      <svg className="mx-auto"  width="468" height="2" viewBox="0 0 468 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="mx-auto brd"  width="90%" height="2" viewBox="0 0 468 2" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 1H468" stroke="white"/>
 </svg>
       <p className="p-4 text-center text-white">Integrates with </p>

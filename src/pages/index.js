@@ -139,7 +139,7 @@ const Index = ({ data, location }) => {
         </Grid.Container>
       </Section>
 
-      <Section className="help group relative py-24 md:bg-white bg-green-light 2xl:py-28">
+      <Section className="help group relative py-24 bg-green-light 2xl:py-28">
         <Decor animated />
 
         <Grid.Container xs className="text-center">

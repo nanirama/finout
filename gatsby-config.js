@@ -30,7 +30,7 @@ module.exports = {
     },
     menuLinks: [
       {
-        title: "Products",
+        title: "Product",
         url: "/products/",
       },
       {

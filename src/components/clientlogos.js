@@ -8,14 +8,8 @@ import Singular from "../images/Singular-logo.svg"
 import Logz from "../images/Logz-logo.svg"
 import Pixellot from "../images/Pixellot-logo.svg"
 
-
-
-
-
-
 const ClientLogos = () => {
-   
-    
+       
     const settings = {
     centerMode: true,
     infinite: true,
@@ -48,7 +42,7 @@ const ClientLogos = () => {
    
 return( 
 
-<Section className="relative md:py-8 py-5">
+<Section className="relative md:py-8 py-5 z-10">
 
    <Slider {...settings} className="slides">
      
