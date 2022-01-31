@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+// import TopSection from "../components/products/top-section"
 import TopSection from "../components/products/top-section"
 import WhatweDo from "../components/products/what-we-do"
 import Clients from "../components/products/clients"
@@ -30,6 +31,7 @@ const Products = ({ data, location }) => {
         description="Products desc"
          url={location.href}
       />
+      {/* <TopSection data={data.product}/> */}
       <TopSection data={data.product}/>
       <WhatweDo data={data.product}/>
       <Clients data={data.product}/>

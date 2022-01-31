@@ -1,6 +1,7 @@
 import React from "react"
 import Slider from "react-slick";
 import Section from "../components/ui/section"
+import SvgImage from "../components/svgImage"
 
 import Hunters from "../images/Hunters-logo.svg"
 import Bigabid from "../images/Bigabid-logo.svg"
@@ -8,8 +9,8 @@ import Singular from "../images/Singular-logo.svg"
 import Logz from "../images/Logz-logo.svg"
 import Pixellot from "../images/Pixellot-logo.svg"
 
-const ClientLogos = () => {
-       
+const ClientLogos = ({data}) => {   
+  console.log('Logos', data)    
     const settings = {
     centerMode: true,
     infinite: true,
@@ -36,6 +37,12 @@ const ClientLogos = () => {
            slidesToShow:3,
          },
        },
+       {
+        breakpoint: 600,
+        settings: {
+          slidesToShow:3,
+        },
+      },
     ],
       
     };
@@ -43,13 +50,22 @@ const ClientLogos = () => {
 return( 
 
 <Section className="relative md:py-8 py-5 z-10">
-
    <Slider {...settings} className="slides">
-     
-         <div className="clientimg">           
-           <Hunters/>   
-         </div>
-         <div className="clientimg">        
+       {data && data.map((item, index)=>{
+         return(
+           <>
+           <SvgImage id={item?.image?.id} className="clientimg" /> 
+          </>     
+         )
+       })}
+       {data && data.map((item, index)=>{
+         return(
+           <>
+           <SvgImage id={item?.image?.id} className="clientimg" /> 
+          </>     
+         )
+       })}
+         {/* <div className="clientimg">        
           <Bigabid/>                 
          </div>
          <div className="clientimg">   
@@ -72,26 +88,8 @@ return(
          </div>
          <div className="clientimg">      
           <Pixellot/>                 
-         </div>
-     
-      {/* <div className="flex flex-col w-full h-full">
-       
-      <div className="flex flex-row justify-between items-center">           
-           <Client1/>           
-         </div>
-      </div>
-      <div className="flex flex-col w-full h-full">
-        
-         <div className="flex flex-row justify-between items-center">
-           666
-         </div>
-      </div>
-      <div className="flex flex-col w-full h-full">
-       
-         <div className="flex flex-row justify-between items-center">
-            444
-         </div>
-      </div> */}
+         </div> */}
+
    </Slider>
 </Section>
 

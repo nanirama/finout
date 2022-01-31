@@ -40,9 +40,9 @@ function SvgImage({ id, className }) {
         return node.id===id
     })
     const { svg, file } = SvgImg.node
-    if (file.contentType === 'image/svg+xml') {
+    if (file.contentType === 'image/svg+xml' && svg) {
         if (svg && svg.content) {
-        return <div className={`w-full flex justify-items-stretch ${className}`} dangerouslySetInnerHTML={{ __html: svg.content }} />
+        return <div className={className ? className : `w-full flex justify-items-stretch`} dangerouslySetInnerHTML={{ __html: svg.content }} />
         }
         return <img src={file.url} />
     }

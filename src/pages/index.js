@@ -36,6 +36,7 @@ const Index = ({ data, location }) => {
   const thumbnail = data?.page?.featuredImage?.resize?.src || defaultThumbnail
   const testimonials = data?.page?.testimonials || null
   const features = data?.page?.features || []
+  const clientLogos = data?.page?.clientLogos || []
   const featureSpotlightTitle = data?.page?.featureSpotlightTitle || null
   const featureSpotlightButton = data?.page?.featureSpotlightButton || null
   const servicesTitle = data?.page?.servicesTitle || null
@@ -43,7 +44,7 @@ const Index = ({ data, location }) => {
   const servicesButton = data?.page?.servicesButton || null
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
@@ -63,8 +64,8 @@ const Index = ({ data, location }) => {
         image={thumbnail}
         url={location.href}
       />
-<ClientLogos/>
-      <Section className="py-20 bg-green-light overflow-hidden">
+      <ClientLogos data={clientLogos}/>
+      <Section className="py-20 bg-green-light overflow-hidden testimonial">
       <div className="w-full">
         <Slider {...settings}>
           {testimonials &&
@@ -73,16 +74,17 @@ const Index = ({ data, location }) => {
                 key={testimonial?.id}
                 name={testimonial?.name}
                 cite={testimonial?.company}
+                pic={testimonial?.picture}
                 quote={testimonial?.content?.content}
                 className="max-w-4xl mx-auto pb-6"
               />
             ))}
              </Slider>
-             <div className="flex flex-col items-center justify-center ">
+             {/* <div className="flex flex-col items-center justify-center ">
              <Andree/>
              <h4 className="my-2">Andreessen Horowitz</h4>
              <p className="font-bold text-md text-center text-gray-500">Finout, A FinOps Cloud Cost Observability Platform</p>
-             </div>
+             </div> */}
         </div>
       </Section>
 
@@ -180,12 +182,26 @@ export const pageQuery = graphql`
           src
         }
       }
+      clientLogos {
+        image {
+          id
+          file {
+            url
+            fileName
+          }
+          gatsbyImageData(width: 40, layout: FIXED)
+        }
+      }
       testimonials {
         id
         name
         company
         content {
           content
+        }
+        picture {
+          id
+          gatsbyImageData(width: 40, layout: FIXED)
         }
       }
       features {

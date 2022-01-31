@@ -61,37 +61,38 @@ header.fixed {
 	}
 }
 
-.slick-slider {
+
+.slides {
+	.slick-slider {
+		.slick-prev {
+			border: 1px solid #D0D0D0;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			text-align: center;
+			z-index: 9999;
+			 left: 0;
+		}
+		.slick-next {
+			border: 1px solid #D0D0D0;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			text-align: center;
+			z-index: 9999;
+			right: 0;
+		}
+	}
 	.slick-prev {
-		border: 1px solid #D0D0D0;
-		width: 60px;
-		height: 60px;
-		border-radius: 50%;
-		text-align: center;
-		z-index: 9999;
-		left: 0;
+		&::before {
+			display: none;
+		}
 	}
 	.slick-next {
-		border: 1px solid #D0D0D0;
-		width: 60px;
-		height: 60px;
-		border-radius: 50%;
-		text-align: center;
-		z-index: 9999;
-		right: 0;
+		&::before {
+			display: none;
+		}
 	}
-}
-.slick-prev {
-	&::before {
-		display: none;
-	}
-}
-.slick-next {
-	&::before {
-		display: none;
-	}
-}
-.slides {
 	.slick-slide {
 		margin: 0 10px;
 	}
@@ -120,6 +121,16 @@ header.fixed {
 		width: 30%;
 		z-index: 100;
 		background: linear-gradient(89.51deg, #FFFFFF 10%, rgba(255, 255, 255, 0) 100%);
+	}
+}
+
+.testimonial{
+	p{
+		font-size:20px;
+		color:#999;
+	}
+	.slick-slide img{
+		border-radius: 32px;
 	}
 }
 
@@ -309,9 +320,44 @@ header.fixed {
 	}	
 }
 
-
-
-
+.top_section{
+	overflow: hidden;
+	div{
+		padding-top: 0 !important;
+	}
+	.product_row{ 
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.product_txt {
+	-ms-flex: 0 0 50%;
+	flex: 0 0 50%;
+	padding-top: 1rem;
+	position: relative;
+}
+.product_img {
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		img{
+			position: relative;
+			z-index: 10;
+			max-width: 45rem;
+			height: auto;
+			margin: 1.25rem 0 2.5rem 3.125rem;
+			width:auto;
+		}
+	}
+}
+@media only screen and (min-width:1751px) {
+.top_section{
+	.product_img{
+		img{
+			max-width:60rem;
+		}
+	}
+}
+}
 @media only screen and (min-width:1024px) {
 	.cardfeature {
 		h3 {
@@ -330,35 +376,11 @@ header.fixed {
 			margin-right: -8rem;
 		  }
 	}
-	.top_section {
-		height: 600px;
-		.dashboard {
-			position: absolute;
-			right: 0;
-			top: 60px;
-			width: 660px;
-			img {
-				height: 480px;
-			}
-		}
-	}
-
 }
 
 @media only screen and (min-width:1751px) and (max-width:1900px) {
 	.hero_banner {
 		padding-bottom: 160px !important;
-	}
-	.top_section{
-		height:800px;
-		padding:90px 0;
-		.dashboard {
-			top:95px;
-			width:850px;
-			img {
-				height: 600px;
-			}
-		}
 	}
 }
 @media only screen and (min-width:1551px) and (max-width:1750px) {
@@ -366,33 +388,28 @@ header.fixed {
 		padding-bottom: 130px !important;
 	}
 	.top_section{
-		height:745px;
-		padding:90px 0;
-		.dashboard {
-			top:95px;
-			width:800px;
-			img {
-				height: 560px;
+		.product_img{
+			img{
+				max-width:50rem;
 			}
 		}
 	}
+}
+@media only screen and (min-width:1366px) and (max-width:1450px) {
+	.top_section{
+		.product_img{
+			img{
+				height:500px;
+			}
+		}
+	}
+
 }
 @media only screen and (min-width:1367px) and (max-width:1550px) {
 	.hero_banner {
 		padding-bottom: 115px !important;
 		h2{
 			font-size:2.1rem !important;
-		}
-	}
-	.top_section{
-		height:660px;
-		padding:85px 0;
-		.dashboard {
-			top:85px;
-			width: 700px;
-			img {
-				height: 520px;
-			}
 		}
 	}
 }
@@ -408,15 +425,6 @@ header.fixed {
 	.hero_banner {
 		padding: 6rem 0 !important;
 	  }
-	.top_section {
-		height: 540px;
-		.dashboard{
-			width:520px;
-			img{
-				height:400px;
-			}
-		}
-	}
 }
 @media only screen and (max-width:1023px) {
 	.shape {
@@ -448,11 +456,23 @@ header.fixed {
 		}
 	}
 	.top_section {
-		.dashboard{
-			width:100%;
-			padding:0 1rem;
+		.product_row{
+			flex-direction: column;
+			text-align:center;
+		}
+	.product_txt {
+		flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+	}
+	.product_img {
+		flex: 0 0 100%;
+		-ms-flex: 0 0 100%;
+		img{
+			margin-left:0;
+			margin-bottom: 0;
 		}
 	}
+}
 	.integration {
 		height: inherit;
 		.left_blk {
@@ -520,14 +540,28 @@ header.fixed {
 			padding:1rem 3rem;
 		}
 	}
+	// .hero_banner {
+	// 	.pb-95{
+	// 		padding-bottom:95%;
+	// 	}
+	// }
 	.hero_banner {
-		.pb-95{
-			padding-bottom:95%;
+		background-color: #48a57d;
+		.hero-video {
+			top: 0rem !important;
+			height: 100vh !important;
+		}
+		.pb-95 {
+			padding-bottom: 75%;
 		}
 	}
-	.top_section{
-		.pl-40 {
-			padding-left: 2rem;
+	.top_section {
+		padding-top:2rem;
+		.product_img{
+			padding:0 15px;
+			img{
+				max-width: 100%;
+			}
 		}
 	}
 	.clientsvg {
@@ -632,6 +666,14 @@ header.fixed {
 		font-size: 1.3rem;
 	}	
 }
+@media only screen and (min-width:711px) and (max-width:767px) {
+	.hero_banner {
+		.hero-video {
+			top: 4rem !important;
+		}
+	}
+}
+
 @media only screen and (max-width:550px) {
 	header {
 		nav {
@@ -640,6 +682,9 @@ header.fixed {
 	}
 	.hero_banner{
 		padding-top:12rem;
+		.pb-95 {
+			padding-bottom: 60%;
+		}
 		h2{
 			font-size: 36px;
 			br{
@@ -819,11 +864,56 @@ header.fixed {
 	}
 }
 
-.clientimg{
- justify-content: center; display: flex !important;align-items: center; text-align: center;
-svg{
-	width:90%; 
+@media only screen and (max-width:400px) {
+	.hero_banner {
+		.hero-video {
+			top: -6rem !important;
+		}
+		.pb-95 {
+			padding-bottom: 40%;
+		}
+	}
 }
+.clientlogos .slick-slider .slick-track, .clientlogos .slick-slider .slick-list{
+	width:100% !important;
+}
+.clientimg{
+	justify-content: center;
+	display: flex !important;
+	align-items: stretch;
+	text-align: center;
+
+	svg { 
+		margin: 0 auto;
+		width:210px !important; 
+		min-height:60px !important; 
+		fill:#999999 !important;
+		opacity:0.6 !important;
+		&:hover {
+			fill: #002e42 !important;
+			opacity:1 !important;
+			transition: all .5s ease-in-out;
+		}
+	}
+		div{
+			justify-content: center;
+			display: flex !important;
+			align-items: stretch;
+			text-align: center;
+				svg { 
+					margin: 0 auto;
+					width:90%; 
+					height:50px;
+					fill:#999999 !important;
+					opacity:0.6 !important;
+					&:hover {
+						fill: #002e42 !important;
+						opacity:1 !important;
+						transition: all .5s ease-in-out;
+					}
+				}
+		}
+
 }
 
 blockquote{
@@ -852,3 +942,4 @@ blockquote{
 // 		}
 // 	}
 // }
+
