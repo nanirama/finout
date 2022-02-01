@@ -65,7 +65,7 @@ const Index = ({ data, location }) => {
         url={location.href}
       />
       <ClientLogos data={clientLogos}/>
-      <Section className="py-20 bg-green-light overflow-hidden testimonial">
+      <Section className="py-20 pt-12 bg-green-light overflow-hidden testimonial">
       <div className="w-full">
         <Slider {...settings}>
           {testimonials &&

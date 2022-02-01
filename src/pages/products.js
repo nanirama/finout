@@ -49,7 +49,7 @@ export default Products
 
 export const productQuery = graphql`
 query {
-  product: contentfulPageProducts(slug: {eq: "Product"}) {
+  product: contentfulPageProducts(slug: {eq: "Product-page"}) {
     slug
     id
     title
