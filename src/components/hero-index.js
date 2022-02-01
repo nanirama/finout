@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, navigate } from "gatsby"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
 import * as POSITIONS from "../shared/positions"
@@ -59,7 +59,7 @@ const HeroIndex = () => {
 
   const handleClick = () => {
     setFormSubmit(true)
-    window.open("https://go.finout.io/start-now");
+    navigate("https://go.finout.io/start-now");
   };
 
   const content = data?.heroContent || ""
