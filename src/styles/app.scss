@@ -965,7 +965,11 @@ blockquote{
 		display: none;
 	}
 }
-
+.testimonial{
+	p{
+		font-weight:400 !important;
+	}
+}
 
 // @media only screen and (max-width:767px) {
 // 	.hero_banner {
