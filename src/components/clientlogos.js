@@ -17,11 +17,11 @@ const ClientLogos = ({data}) => {
     centerPadding: '0%',
     slidesToShow: 8,
     slidesToScroll: 1,
-    speed: 3000,
+    speed: 4000,
     variableWidth: false,
     dots: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed:500,
     arrows: false,
     responsive: [
     

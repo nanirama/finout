@@ -316,8 +316,9 @@ header.fixed {
 			width: 185px;
 			height: 65px;
 			margin: 0 auto;
-
+			filter: grayscale(100%) !important;
 			&:hover {
+				filter: grayscale(0%) !important;
 				fill: #002e42 !important;
 				transition: all .5s ease-in-out;
 			}
@@ -930,8 +931,9 @@ header.fixed {
 		min-height:60px !important; 
 		fill:#999999 !important;
 		opacity:0.6 !important;
-		border:2px solid red;
+		filter: grayscale(100%) !important;
 		&:hover {
+			filter: grayscale(0%) !important;
 			fill: #002e42 !important;
 			opacity:1 !important;
 			transition: all .5s ease-in-out;
