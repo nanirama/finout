@@ -189,7 +189,7 @@ export const pageQuery = graphql`
             url
             fileName
           }
-          gatsbyImageData(width: 40, layout: FIXED)
+          gatsbyImageData(layout: CONSTRAINED, quality: 100)
         }
       }
       testimonials {
@@ -201,7 +201,7 @@ export const pageQuery = graphql`
         }
         picture {
           id
-          gatsbyImageData(width: 40, layout: FIXED)
+          gatsbyImageData(layout: CONSTRAINED, quality: 100)
         }
       }
       features {
