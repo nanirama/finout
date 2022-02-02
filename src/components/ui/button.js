@@ -20,7 +20,7 @@ const Button = ({ to, color, size, title, className, children }) => {
   return (
     <React.Fragment>
       {regex.test(to) && (
-        <a href={`${to}/`} className={btnClasses}>
+        <a href={`${to}/`} className={btnClasses} target="_blank">
           {title && title}
           {!title && children}
         </a>

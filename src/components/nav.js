@@ -45,7 +45,7 @@ const Nav = ({ isOpen, isSticky, path }) => {
           Log in
         </Button>
         <Button
-          to={site?.siteMetadata?.get}
+          to="https://go.finout.io/start-now"
           className={isSticky ? "btn btn-coral btn-lg text-lg lg:btn-outlined-green-dark lg:bg-white lg:text-green lg:btn-sm border-2" : "btn btn-coral btn-lg text-lg lg:btn-outlined-green-dark lg:bg-white lg:text-green lg:btn-sm border-2"}>
           Get Started
         </Button>

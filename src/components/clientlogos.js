@@ -17,7 +17,7 @@ const ClientLogos = ({data}) => {
     centerPadding: '0%',
     slidesToShow: 8,
     slidesToScroll: 1,
-    speed: 500,
+    speed: 3000,
     variableWidth: false,
     dots: false,
     autoplay: true,

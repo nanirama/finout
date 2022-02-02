@@ -930,6 +930,7 @@ header.fixed {
 		min-height:60px !important; 
 		fill:#999999 !important;
 		opacity:0.6 !important;
+		border:2px solid red;
 		&:hover {
 			fill: #002e42 !important;
 			opacity:1 !important;
