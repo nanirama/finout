@@ -100,7 +100,12 @@ const HeroIndex = () => {
                             <form action="#" className="newsform mb-20">
                             <div className="form_inner flex justify-between bg-white shadow-inner rounded-full pl-3 pr-1 py-1">
                             <input type="email" placeholder="Your email" className="w-full px-2 py-4 mr-2 text-lg font-normal text-current border-0 focus:outline-none" required/>
-                            <button className="bg-coral text-white font-bold text-base px-3 py-3 rounded-full" onClick={handleClick}>See It In Action</button>
+                            <button className="bg-coral text-white font-bold text-base px-3 py-3 rounded-full"
+                              onClick={ () => {
+                                  setFormSubmit(true);
+                                  window.open("https://go.finout.io/start-now", "_blank")
+                              }}
+                            >See It In Action</button>
                             </div>
                             </form>
                           )}
