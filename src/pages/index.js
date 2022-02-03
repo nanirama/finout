@@ -44,7 +44,7 @@ const Index = ({ data, location }) => {
   const servicesButton = data?.page?.servicesButton || null
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 1,

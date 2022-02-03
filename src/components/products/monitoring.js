@@ -11,9 +11,9 @@ const Monitoring = ({data}) => {
    const { services } = data
    console.log('services', services)
 return (
-<Section className="bg-pink pt-16 pb-20 lg:mt-56 aws_outer lg:text-left text-center">
+<Section className="bg-pink pt-16 lg:mt-56 aws_outer lg:text-left text-center">
    <div class="container max-w-4xl">
-      <Grid.Row className="column-reverse">
+      <Grid.Row className="column-reverse serv_blk">
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full pt-40 aws_blk">
                <h2 className="mb-6 text-5xl relative z-10 inline-block">
@@ -38,8 +38,7 @@ return (
             </div>
          </Grid.Col>
       </Grid.Row>
-      <div className="md:py-8 py-4"></div>
-      <Grid.Row>
+      <Grid.Row className="serv_blk">
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full">
             {services[1].featuredImage.id && <SvgImage id={services[1].featuredImage.id } className="lg:mb-3 mb-10 servicesvg"/>} 
@@ -63,8 +62,7 @@ return (
             </div>
          </Grid.Col>
       </Grid.Row>
-      <div className="md:py-8 py-4"></div>
-      <Grid.Row className="column-reverse">
+      <Grid.Row className="column-reverse serv_blk">
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full">
                <h2 className="mb-6 leading-tight text-5xl relative z-10 inline-block">
@@ -92,8 +90,7 @@ return (
             </div>
          </Grid.Col>
       </Grid.Row>
-      <div className="md:py-8 py-4"></div>
-      <Grid.Row>
+      <Grid.Row className="serv_blk">
          <Grid.Col size="w-full lg:w-1/2">
             <div className="w-full lg:pr-18">
             {services[3].featuredImage.id && <SvgImage id={services[3].featuredImage.id } className="lg:mb-3 mb-10 servicesvg"/>} 

@@ -16,7 +16,7 @@ const { mainFeaturesHeading, mainFeaturesFeatures, mainFeaturesButtonLink } = da
 console.log('List',mainFeaturesFeatures)
 
 return (
-<Section className="group bg-blue-50 lg:pt-40 pt-16 pb-0 lg:pb-28 lg:text-left text-center">
+<Section className="group bg-blue-50 lg:text-left text-center features_blk">
    <div class="container max-w-4xl lg:flex">
       <div class="lg:w-2/5 w-full">
          <div className="w-full">

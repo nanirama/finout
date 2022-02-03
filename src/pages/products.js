@@ -8,7 +8,7 @@ import TopSection from "../components/products/top-section"
 import WhatweDo from "../components/products/what-we-do"
 import Clients from "../components/products/clients"
 import Features from "../components/products/features"
-import Finops from '../components/products/finops'
+// import Finops from '../components/products/finops'
 import Integration from "../components/products/integration"
 import Monitoring from "../components/products/monitoring"
 import Tabs from "../components/products/tabs"
@@ -38,7 +38,7 @@ const Products = ({ data, location }) => {
       <Features data={data.product}/>
       <Integration/>
       <Monitoring data={data.product}/>
-      <Finops/>
+      {/* <Finops/> */}
       <Tabs data={data.product}/>
       <CtaWithPosts/>
     </Layout>
