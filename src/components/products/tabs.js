@@ -123,12 +123,12 @@ const { DashboardImg2 } = useStaticQuery(
             <div className="pt-5 flex-auto">
               <div className="tab-content tab-space">
               { howItWorksFeatures && howItWorksFeatures.map((item, index)=>{
-                console.log('tab item', item)
+                //console.log('tab item', item)
               return(
                 <div className={openTab ===  index+1 ? "block mb-10" : "hidden"} id={`link${index+1}`}>                                 
                   <RichTextContent
                     description={item.content}
-                    classes="mb-5 max-w-3xl mx-auto px-3 text-lg"
+                    classes="mb-5 max-w-3xl mx-auto px-3 text-lg text-left"
                     />
                   <div className="-mb-11 mt-12">
                   <GatsbyImage image={getImage(item.image)} />

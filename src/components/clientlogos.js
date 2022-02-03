@@ -10,7 +10,7 @@ import Logz from "../images/Logz-logo.svg"
 import Pixellot from "../images/Pixellot-logo.svg"
 
 const ClientLogos = ({data}) => {   
-  console.log('Logos', data)    
+   
     const settings = {
     centerMode: true,
     infinite: true,
