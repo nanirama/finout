@@ -382,6 +382,9 @@ header.fixed {
 	h2{
 		font-size: 55px;
 		line-height: 65px;
+		svg{
+			width: 175px;
+		}
 	}
 	p{
 		font-size: 18px;
@@ -438,6 +441,9 @@ header.fixed {
 		h2{
 			font-size: 55px;
 			line-height: 65px;
+			svg{
+				width: 175px;
+			}
 		}
 		p{
 			font-size: 18px;
@@ -527,7 +533,7 @@ header.fixed {
 		flex: 0 0 100%;
 		-ms-flex: 0 0 100%;
 		img{
-			margin-top:1rem;
+			margin-top:1rem;max-width:100%;
 		}
 	}
 }
@@ -563,6 +569,9 @@ header.fixed {
 				svg{
 					width:70%;
 				}
+		}
+		.aws_blk{
+			padding-top: 50px;
 		}
 		.serv_blk{
 			padding-bottom: 70px;
@@ -634,7 +643,7 @@ header.fixed {
 		}
 	}
 	.clientsvg {
-		width:25%;
+		width:50%;
 		padding:0 1rem;
 	}
 	.aws_outer {
@@ -842,7 +851,7 @@ header.fixed {
 	}
 	.int-logo.logo1 {
 		img{
-			left:-6px;
+			left:-4px;
 		}
 	}
 	.int-logo.logo2 {
@@ -1003,6 +1012,110 @@ blockquote{
 		font-weight:400 !important;
 	}
 }
+
+
+
+
+
+
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+	.hero_banner {
+		
+		.hero-video {
+		
+			top: -30rem !important; border:2px solid red;
+		}
+
+	}
+}
+
+
+@media only screen and (min-width:540px) and (max-width:767px) {
+		.hero_banner {
+		
+			.hero-video {
+			
+				height:600px !important; top:2rem !important;
+			}
+
+			.pb-95 {
+				padding-bottom: 85%;
+			}
+
+		}
+	}	
+
+	@media only screen and (min-width:480px) and (max-width:539px) {
+		.hero_banner {
+		
+			.hero-video {
+			
+				height:600px !important; top:0rem !important;
+			}
+
+			.pb-95 {
+				padding-bottom: 85%;
+			}
+
+		}
+	}	
+
+
+	@media only screen and (min-width:300px) and (max-width:479px) {
+		.hero_banner {
+		
+			.hero-video {
+			
+				height:600px !important; top:0rem !important;
+			}
+
+			.pb-95 {
+				padding-bottom: 85%;
+			}
+
+		}
+	}	
+
+	@media only screen and (min-width:400px) and (max-width:479px) {
+		.hero_banner {
+		
+			.hero-video {
+			
+			 top:-3rem !important;
+			}
+
+			
+
+		}
+	}
+
+	@media only screen and (min-width:351px) and (max-width:399px) {
+		.hero_banner {
+		
+			.hero-video {
+			
+			 top:-5rem !important;
+			}
+
+			
+
+		}
+	}
+
+	@media only screen and (max-width:350px) {
+		.hero_banner {
+		
+			.hero-video {
+			
+				height:400px !important;
+			}
+		}
+	}
+
+
+
+
 
 // @media only screen and (max-width:767px) {
 // 	.hero_banner {

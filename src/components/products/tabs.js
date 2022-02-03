@@ -119,7 +119,7 @@ const { DashboardImg2 } = useStaticQuery(
               </a>
             </li> */}
           </ul>
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full">
+          <div className="relative flex flex-col min-w-0 break-words bg-white max-w-xl mx-auto">
             <div className="pt-5 flex-auto">
               <div className="tab-content tab-space">
               { howItWorksFeatures && howItWorksFeatures.map((item, index)=>{
