@@ -46,11 +46,11 @@ const Index = ({ data, location }) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 300,
+    speed: 6000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 500,
   }
 
   return (

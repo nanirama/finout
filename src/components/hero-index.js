@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { useStaticQuery, graphql, navigate } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
 import * as POSITIONS from "../shared/positions"
@@ -61,7 +62,7 @@ const HeroIndex = () => {
 
   const handleClick = () => {
     setFormSubmit(true)
-    navigate("https://go.finout.io/start-now");
+    //navigate("https://go.finout.io/start-now");
   };
 
   const content = data?.heroContent || ""
@@ -108,7 +109,13 @@ const HeroIndex = () => {
                             </div>
                             </div>
                           )}
-                  <SocLogo/>
+                          <StaticImage
+                              src="../images/soc-logo.png"
+                              placeholder="blurred"
+                              layout="fixed"
+                              width={55}
+                          />
+                  {/* <SocLogo className="lg:mx-0 mx-auto mb-12"/> */}
                </div>
 
 
