@@ -114,6 +114,7 @@ const HeroIndex = () => {
                               placeholder="blurred"
                               layout="fixed"
                               width={55}
+                              className="lg:mx-0 mx-auto mb-12"
                           />
                   {/* <SocLogo className="lg:mx-0 mx-auto mb-12"/> */}
                </div>
