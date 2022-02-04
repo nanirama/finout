@@ -46,9 +46,10 @@ const Index = ({ data, location }) => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 6000,
+    speed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    fade: true,
     autoplay: true,
     autoplaySpeed: 500,
   }

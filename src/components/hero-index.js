@@ -18,7 +18,7 @@ import videoMobile from "../images/hero-mobile.mp4"
 import videoMobileThumbnail from "../images/hero-mobile-thumbnail.png"
 import SlideDice from "../svg/slide-dice.svg"
 
-import SocLogo from "../images/soc-logo2.svg"
+import SocLogo from "../images/soc_logo.svg"
 
 const options = {
   renderNode: {
@@ -109,14 +109,11 @@ const HeroIndex = () => {
                             </div>
                             </div>
                           )}
-                          <StaticImage
-                              src="../images/soc-logo.png"
-                              placeholder="blurred"
-                              layout="fixed"
-                              width={55}
+                          {/* <StaticImage
+                              src="../images/soc_logo.png"
                               className="lg:mx-0 mx-auto mb-12"
-                          />
-                  {/* <SocLogo className="lg:mx-0 mx-auto mb-12"/> */}
+                          /> */}
+                  <SocLogo className="lg:mx-0 mx-auto mb-12"/>
                </div>
 
 
