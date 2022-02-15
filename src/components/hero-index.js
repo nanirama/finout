@@ -109,11 +109,12 @@ const HeroIndex = () => {
                             </div>
                             </div>
                           )}
-                          {/* <StaticImage
+                          <StaticImage
                               src="../images/soc_logo.png"
                               className="lg:mx-0 mx-auto mb-12"
-                          /> */}
-                  <SocLogo className="lg:mx-0 mx-auto mb-12"/>
+                              width={55}
+                          />
+                  {/* <SocLogo className="lg:mx-0 mx-auto mb-12"/> */}
                </div>
 
 
