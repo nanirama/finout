@@ -79,7 +79,7 @@ const HeroIndex = () => {
               <div className="pb-[95%] pb-95 lg:hidden"></div>
 
               <div className="w-full px-3">
-                  <p className="text-white py-3 text-sm">Self Service, no code platfrom</p>
+                  <p className="text-white py-3 text-sm">Self Service, no code platform</p>
                   <h2 className="mb-4 text-5xl text-white">
                      One &nbsp;
                      <span class="relative">
